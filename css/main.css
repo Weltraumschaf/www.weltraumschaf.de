@@ -6,3 +6,29 @@
         Purpose of the stylesheet follows.
 */
 
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    text-align: center;
+}
+
+ul { /* remove bullets and list indents */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+img {
+    border: 0;
+}
+
+#profiles {
+    padding-top: 10%;
+}
+
+#links {
+    padding-top: 10%;
+}
