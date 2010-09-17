@@ -9,6 +9,7 @@
 body {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     text-align: center;
+    background-color: #E4E4E4;
 }
 
 ul { /* remove bullets and list indents */
@@ -23,6 +24,18 @@ li {
 
 img {
     border: 0;
+}
+
+a {
+    color: #000;
+}
+
+a:visited, a:active {
+    color: #5A5A5A;
+}
+
+a:hover {
+    color: #8D8D8D;
 }
 
 #profiles {
