@@ -12,6 +12,9 @@
 
         <link href="css/main.css" rel="stylesheet" type="text/css" />
 
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/jquery.amail.js"></script>
+        
         <script type="text/javascript">
 	/* <![CDATA[ */
 	    var gaJsHost = (("https:" === document.location.protocol) ? "https://ssl." : "http://www."),
@@ -24,6 +27,18 @@
     <body>
         <h1>Impressum von weltraumschaf.de</h1>
 
+        <div id="impressum">
+            <p>Sollten Sie mich aus irgendwelchen Gr&uuml;nden kontaktiern wollen,
+               dann k&ouml;nnen Sie das per E-Mail tun. Klicken Sie
+               <a class="contact" title="hier">ich(at)weltraumschaf(dot)de</a>.</p>
+
+            <p>Wollen Sie mehr Informationen &uuml;ber dies Domain, dann k&ouml;nnen
+               Sie diese bei der <a href="http://www.denic.de/">DeNIC</a> abrufen.</p>
+
+            <p>Alles auf dieser Website wird unter der <a href="./the-beer-ware-license.txt">
+               Beer-Ware license</a> ver&ouml;ffentlicht.</p>
+       </div>
+
         <ul id="links">
             <li>
                 <a href="./index.html">zur&uuml;ck</a>
@@ -32,6 +47,10 @@
 
         <script type="text/javascript">
 	/* <![CDATA[ */
+            $(function(){
+                $('.contact').amail('(at)','(dot)');
+            });
+
             try {
                 var pageTracker = _gat._getTracker("UA-9617079-3");
                 pageTracker._trackPageview();
