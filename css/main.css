@@ -22,6 +22,11 @@ li {
     display: inline;
 }
 
+p {
+    width: 500px;
+    margin: 1em auto;
+}
+
 img {
     border: 0;
 }
@@ -38,10 +43,10 @@ a:hover {
     color: #8D8D8D;
 }
 
-#profiles {
+#profiles, #links, #impressum {
     padding-top: 10%;
 }
 
-#links {
-    padding-top: 10%;
+#impressum {
+    text-align: left;
 }
