@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?php echo '<?xml version="1.0" encoding="utf-8" ?>' . PHP_EOL; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
     <head>
@@ -13,17 +13,7 @@
 
         <link href="css/main.css" rel="stylesheet" type="text/css" />
 
-        <script type="text/javascript" src="./js/jquery.js"></script>
-        <script type="text/javascript" src="./js/jquery.amail.js"></script>
-
-        <script type="text/javascript">
-	/* <![CDATA[ */
-	    var gaJsHost = (("https:" === document.location.protocol) ? "https://ssl." : "http://www."),
-		gaJsUrl  = "%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E";
-
-	    document.write(unescape(gaJsUrl));
-	/* ]]> */
-	</script>
+        <?php include 'inc/head_javascript.html'; ?>
     </head>
     <body>
         <h1>Hier wohnt das Weltraumschaf</h1>
@@ -65,29 +55,13 @@
             <li>
                 <a href="http://www.cacert.org/index.php?id=3">
                     Root-Zertifikate von CAcert</a> &mdash;
-                <a href="./impressum.html">Impressum</a> &mdash;
+                <a href="./impressum.php">Impressum</a> &mdash;
                 <a class="contact" title="E-Mail an mich">
                     ich(at)weltraumschaf(dot)de</a>
             </li>
         </ul>
 
-        <script type="text/javascript">
-	/* <![CDATA[ */
-            $(function(){
-                $('.contact').amail('(at)','(dot)');
-            });
-
-            try {
-                var pageTracker = _gat._getTracker("UA-9617079-3");
-                pageTracker._trackPageview();
-            } catch(err) {
-                if (window.console && window.console.log) {
-                    console.log('exception throwed while GA-Tracking of type: ' + err.type +
-                                ' and message: ' + err.message);
-                }
-            }
-        /* ]]> */
-	</script>
-
+        <?php include 'inc/body_javascript.html'; ?>
+        
     </body>
 </html>
