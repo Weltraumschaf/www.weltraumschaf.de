@@ -25,11 +25,6 @@
                 </a>
             </li>
             <li>
-                <a href="http://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
-                    <img src="img/Github.png" alt="GitHub" />
-                </a>
-            </li>
-            <li>
                 <a href="http://twitter.com/Weltraumschaf/" title="Mein Twitter">
                     <img src="img/Twitter.png" alt="Twitter" />
                 </a>
@@ -47,6 +42,21 @@
             <li>
                 <a href="http://www.kwick.de/Weltraumschaf" title="Mein KWICK!-Profil">
                     <img src="img/Kwick.png" alt="KWICK!" />
+                </a>
+            </li>
+            <li>
+                <a href="http://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
+                    <img src="img/Github.png" alt="GitHub" />
+                </a>
+            </li>
+            <li>
+                <a href="http://www.weltraumschaf.de:8080/" title="Mein Hudson CI Server">
+                    <img src="img/Hudson.png" alt="Hudson CI" />
+                </a>
+            </li>
+            <li>
+                <a href="http://pear.weltraumschaf.de/" title="Mein PEAR Channel">
+                    <img src="img/Pear.png" alt="PEAR" />
                 </a>
             </li>
         </ul>
