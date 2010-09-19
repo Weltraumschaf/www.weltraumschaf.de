@@ -5,8 +5,8 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Hier wohnt das Weltraumschaf</title>
 
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta name="description" content="Private Website von Sven Strittmatter" />
+        <meta name="keywords" content="Sven, Strittmatter, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
         <meta http-equiv="content-language" content="de" />
 
         <meta name="robots" content="all" />

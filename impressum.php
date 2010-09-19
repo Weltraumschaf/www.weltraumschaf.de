@@ -4,26 +4,18 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Impressum von weltraumschaf.de</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        
+        <meta name="description" content="Impressum" />
+        <meta name="keywords" content="Sven, Strittmatter, privat, Impressum, Lizenz" />
         <meta http-equiv="content-language" content="de" />
 
         <meta name="robots" content="all" />
 
         <link href="css/main.css" rel="stylesheet" type="text/css" />
 
-        <script type="text/javascript" src="./js/jquery.js"></script>
-        <script type="text/javascript" src="./js/jquery.amail.js"></script>
-        
-        <script type="text/javascript">
-	/* <![CDATA[ */
-	    var gaJsHost = (("https:" === document.location.protocol) ? "https://ssl." : "http://www."),
-		gaJsUrl  = "%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E";
-
-	    document.write(unescape(gaJsUrl));
-	/* ]]> */
-	</script>
+        <?php include 'inc/head_javascript.html'; ?>
     </head>
+    
     <body>
         <h1>Impressum von weltraumschaf.de</h1>
 
@@ -45,23 +37,7 @@
             </li>
         </ul>
 
-        <script type="text/javascript">
-	/* <![CDATA[ */
-            $(function(){
-                $('.contact').amail('(at)','(dot)');
-            });
-
-            try {
-                var pageTracker = _gat._getTracker("UA-9617079-3");
-                pageTracker._trackPageview();
-            } catch(err) {
-                if (window.console && window.console.log) {
-                    console.log('exception throwed while GA-Tracking of type: ' + err.type +
-                                ' and message: ' + err.message);
-                }
-            }
-        /* ]]> */
-	</script>
-
+        <?php include 'inc/body_javascript.html'; ?>
+        
     </body>
 </html>
