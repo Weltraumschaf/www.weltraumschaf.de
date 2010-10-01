@@ -63,6 +63,8 @@
 
         <ul id="links">
             <li>
+                <a href="http://kapit.weltraumschaf.de" title="KWICK! API Testtool">
+                    KAPIT</a>
                 <a href="http://www.cacert.org/index.php?id=3">
                     Root-Zertifikate von CAcert</a> &mdash;
                 <a href="./impressum.php">Impressum</a> &mdash;
