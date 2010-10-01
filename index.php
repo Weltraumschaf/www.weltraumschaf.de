@@ -64,12 +64,12 @@
         <ul id="links">
             <li>
                 <a href="http://kapit.weltraumschaf.de" title="KWICK! API Testtool">
-                    KAPIT</a>
-                <a href="http://www.cacert.org/index.php?id=3">
-                    Root-Zertifikate von CAcert</a> &mdash;
-                <a href="./impressum.php">Impressum</a> &mdash;
+                    KAPIT</a> &mdash;
+                <a href="./impressum.php" title="Lizenz und so&hellip;">Impressum</a> &mdash;
                 <a class="contact" title="E-Mail an mich">
-                    ich(at)weltraumschaf(dot)de</a>
+                    ich(at)weltraumschaf(dot)de</a> &mdash;
+                <a href="http://www.cacert.org/index.php?id=3" title="Braucht man f&uuml;r https://www.weltraumschaf.de">
+                    Root-Zertifikate von CAcert</a>
             </li>
         </ul>
 
