@@ -12,7 +12,7 @@
         <title>Impressum von weltraumschaf.de</title>
         
         <meta name="description" content="Impressum" />
-        <meta name="keywords" content="Sven, Strittmatter, privat, Impressum, Lizenz" />
+        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Impressum, Lizenz" />
         <meta http-equiv="content-language" content="de" />
 
         <meta name="robots" content="all" />

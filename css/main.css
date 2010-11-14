@@ -43,10 +43,10 @@ a:hover {
     color: #8D8D8D;
 }
 
-#profiles, #links, #impressum {
+#profiles, #links, #impressum, #work {
     padding-top: 10%;
 }
 
-#impressum {
+#impressum, #work {
     text-align: left;
 }

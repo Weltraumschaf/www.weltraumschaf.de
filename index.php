@@ -12,7 +12,7 @@
         <title>Hier wohnt das Weltraumschaf</title>
 
         <meta name="description" content="Private Website von Sven Strittmatter" />
-        <meta name="keywords" content="Sven, Strittmatter, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
+        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
         <meta http-equiv="content-language" content="de" />
 
         <meta name="robots" content="all" />
