@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://twitter.com/Weltraumschaf/" title="Mein Twitter">
+                <a href="https://twitter.com/Weltraumschaf/" title="Mein Twitter">
                     <img src="img/Twitter.png" alt="Twitter" />
                 </a>
             </li>
