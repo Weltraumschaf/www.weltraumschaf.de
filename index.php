@@ -23,7 +23,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://www.xing.com/profile/Sven_Strittmatter" title="Mein Xing-Profil">
+                <a href="https://www.xing.com/profile/Sven_Strittmatter" title="Mein Xing-Profil">
                     <img src="img/Xing.png" alt="Xing" />
                 </a>
             </li>
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li>
-                <a href="http://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
+                <a href="https://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
                     <img src="img/Github.png" alt="GitHub" />
                 </a>
             </li>
