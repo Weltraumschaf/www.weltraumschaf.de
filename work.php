@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php
-	$girly = file_get_contents(__DIR__ . '/data/girly');
-
-	if ($girly) {
-	    echo "<!--\n$girly\n-->\n";
-	}
-	?>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<?php include 'inc/girly.php'; ?>
         <title>Dinegn an denen das Weltraumschaf arbeitet</title>
-
         <meta name="description" content="Impressum" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, arbeiten" />
-        <meta http-equiv="content-language" content="de" />
-
-        <meta name="robots" content="all" />
-
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
-
+        <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
     </head>
 
     <body>
-        <h1>Dinge an denen ich arbeite</h1>
+        <h1>Arbeiten vom Weltraumschaf</h1>
 
         <div id="work">
-            <p>KAPIT</p>
-            <p>Lugagne.de</p>
+            <p>Dinge an denen ich arbeite oder die ich gemacht habe.</p>
+
+            <p><a href="http://kapit.weltraumschaf.de/">KAPIT</a> ist das KWICK!
+            API Test-Tool. Gebaut habe ich das kleine Frontend um mit der
+            <a href="http://developer.kwick.com/">KWICK! Social Plattform API</a>
+            herum spielen zu k&ouml;nnen. Man kann mit diesem Tool relativ einfach
+            die API ausprobieren ohne etwas programmieren zu m&uuml;ssen.</p>
+            
+            <p><a href="http://www.lugagne.de/">Lugagne.de</a> ist die Website
+            meines ehemaligen Nachbars.</p>
         </div>
 
         <ul id="links">

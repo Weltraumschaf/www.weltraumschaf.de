@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php
-	$girly = file_get_contents(__DIR__ . '/data/girly');
-
-	if ($girly) {
-	    echo "<!--\n$girly\n-->\n";
-	}
-	?>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<?php include 'inc/girly.php'; ?>
         <title>Hier wohnt das Weltraumschaf</title>
-
         <meta name="description" content="Private Website von Sven Strittmatter" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
-        <meta http-equiv="content-language" content="de" />
-
-        <meta name="robots" content="all" />
-
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
-
+        <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
     </head>
     <body>
@@ -69,8 +56,8 @@
 
         <ul id="links">
             <li>
-                <a href="http://kapit.weltraumschaf.de" title="KWICK! API Testtool">
-                    KAPIT</a> &mdash;
+                <a href="./work.php" title="Arbeiten vom Weltraumschaf">
+                    Arbeiten</a> &mdash;
                 <a href="./impressum.php" title="Lizenz und so&hellip;">Impressum</a> &mdash;
                 <a class="contact" title="E-Mail an mich">
                     ich(at)weltraumschaf(dot)de</a> &mdash;

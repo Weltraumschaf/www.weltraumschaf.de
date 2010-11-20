@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php
-	$girly = file_get_contents(__DIR__ . '/data/girly');
-
-	if ($girly) {
-	    echo "<!--\n$girly\n-->\n";
-	}
-	?>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<?php include 'inc/girly.php'; ?>
         <title>Impressum von weltraumschaf.de</title>
-        
         <meta name="description" content="Impressum" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Impressum, Lizenz" />
-        <meta http-equiv="content-language" content="de" />
-
-        <meta name="robots" content="all" />
-
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
-
+        <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
     </head>
     
