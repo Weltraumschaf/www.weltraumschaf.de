@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1291222333">
-  <project timestamp="1291222333">
+<coverage generated="1291222987">
+  <project timestamp="1291222987">
     <file name="/Users/sxs/Sites/weltraumschaf.de/weltraumschaf.de/lib/Cite.php">
       <class name="Cite" namespace="global">
-        <metrics methods="11" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="17" elements="37" coveredelements="24"/>
+        <metrics methods="11" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="39" coveredelements="36"/>
       </class>
-      <line num="9" type="method" name="__construct" crap="3.71" count="1"/>
-      <line num="10" type="stmt" count="1"/>
-      <line num="11" type="stmt" count="1"/>
+      <line num="9" type="method" name="__construct" crap="4.02" count="4"/>
+      <line num="10" type="stmt" count="4"/>
+      <line num="11" type="stmt" count="2"/>
       <line num="12" type="stmt" count="1"/>
-      <line num="13" type="stmt" count="0"/>
-      <line num="14" type="stmt" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="1"/>
-      <line num="19" type="method" name="fromArray" crap="2" count="1"/>
-      <line num="20" type="stmt" count="1"/>
-      <line num="21" type="stmt" count="1"/>
-      <line num="22" type="stmt" count="1"/>
-      <line num="23" type="stmt" count="1"/>
-      <line num="24" type="stmt" count="1"/>
-      <line num="26" type="method" name="fromObject" crap="2" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="28" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="31" type="method" name="__call" crap="2" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="35" type="method" name="setAuthor" crap="1" count="1"/>
-      <line num="36" type="stmt" count="1"/>
-      <line num="37" type="stmt" count="1"/>
-      <line num="39" type="method" name="getAuthor" crap="1" count="1"/>
-      <line num="40" type="stmt" count="1"/>
-      <line num="43" type="method" name="setTitle" crap="1" count="1"/>
-      <line num="44" type="stmt" count="1"/>
-      <line num="45" type="stmt" count="1"/>
-      <line num="47" type="method" name="getTitle" crap="1" count="1"/>
-      <line num="48" type="stmt" count="1"/>
-      <line num="51" type="method" name="setText" crap="1" count="1"/>
-      <line num="52" type="stmt" count="1"/>
-      <line num="53" type="stmt" count="1"/>
-      <line num="55" type="method" name="getText" crap="2" count="0"/>
-      <line num="56" type="stmt" count="0"/>
-      <line num="59" type="method" name="toJson" crap="2" count="0"/>
-      <line num="60" type="stmt" count="0"/>
-      <metrics loc="61" ncloc="61" classes="1" methods="11" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="17" elements="37" coveredelements="24"/>
+      <line num="13" type="stmt" count="2"/>
+      <line num="14" type="stmt" count="1"/>
+      <line num="15" type="stmt" count="1"/>
+      <line num="16" type="stmt" count="0"/>
+      <line num="18" type="stmt" count="2"/>
+      <line num="19" type="stmt" count="4"/>
+      <line num="21" type="method" name="fromArray" crap="2" count="2"/>
+      <line num="22" type="stmt" count="2"/>
+      <line num="23" type="stmt" count="2"/>
+      <line num="24" type="stmt" count="2"/>
+      <line num="25" type="stmt" count="2"/>
+      <line num="26" type="stmt" count="2"/>
+      <line num="28" type="method" name="fromObject" crap="1" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="method" name="__call" crap="2" count="0"/>
+      <line num="34" type="stmt" count="0"/>
+      <line num="37" type="method" name="setAuthor" crap="1" count="3"/>
+      <line num="38" type="stmt" count="3"/>
+      <line num="39" type="stmt" count="3"/>
+      <line num="41" type="method" name="getAuthor" crap="1" count="3"/>
+      <line num="42" type="stmt" count="3"/>
+      <line num="45" type="method" name="setTitle" crap="1" count="3"/>
+      <line num="46" type="stmt" count="3"/>
+      <line num="47" type="stmt" count="3"/>
+      <line num="49" type="method" name="getTitle" crap="1" count="3"/>
+      <line num="50" type="stmt" count="3"/>
+      <line num="53" type="method" name="setText" crap="1" count="3"/>
+      <line num="54" type="stmt" count="3"/>
+      <line num="55" type="stmt" count="3"/>
+      <line num="57" type="method" name="getText" crap="1" count="3"/>
+      <line num="58" type="stmt" count="3"/>
+      <line num="61" type="method" name="toJson" crap="1" count="1"/>
+      <line num="62" type="stmt" count="1"/>
+      <metrics loc="63" ncloc="63" classes="1" methods="11" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="39" coveredelements="36"/>
     </file>
-    <metrics files="1" loc="61" ncloc="61" classes="1" methods="11" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="17" elements="37" coveredelements="24"/>
+    <metrics files="1" loc="63" ncloc="63" classes="1" methods="11" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="26" elements="39" coveredelements="36"/>
   </project>
 </coverage>

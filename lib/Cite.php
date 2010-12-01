@@ -7,12 +7,14 @@ class Cite implements Jsonable {
     private $text   = '';
 
     public function  __construct($data = null) {
-        if (is_array($data)) {
-            $this->fromArray($data);
-        } else if ($data instanceof  stdClass) {
-            $this->fromObject($data);
-        } else {
-            throw new InvalidArgumentException("Can not handle passed argeument of type " . gettype($data) . "!");
+        if (null !== $data) {
+            if (is_array($data)) {
+                $this->fromArray($data);
+            } else if ($data instanceof  stdClass) {
+                $this->fromObject($data);
+            } else {
+                throw new InvalidArgumentException("Can not handle passed argeument of type " . gettype($data) . "!");
+            }
         }
     }
 
@@ -57,6 +59,6 @@ class Cite implements Jsonable {
     }
 
     public function  toJson() {
-        return "{author: '{$this->author}', title: '{$this->workTitle}', text: '{$this->text}'}";
+        return "{author: '{$this->author}', title: '{$this->title}', text: '{$this->text}'}";
     }
 }
