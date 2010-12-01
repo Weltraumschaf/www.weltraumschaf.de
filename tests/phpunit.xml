@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    LICENSE
+
+    "THE BEER-WARE LICENSE" (Revision 42):
+    "Sven Strittmatter" <ich@weltraumschaf.de> wrote this file.
+    As long as you retain this notice you can do whatever you want with
+    this stuff. If we meet some day, and you think this stuff is worth it,
+    you can buy me a beer in return.
+
+    PHP version 5.3
+
+    @author    Sven Strittmatter <ich@weltraumschaf.de>
+    @copyright 2010 Sven Strittmatter
+    @license   http://www.weltraumschaf.de/the-beer-ware-license.txt The Beer-Ware License
+    @version   0.2
+    @link      http://github.com/Weltraumschaf/WS_Darcs
+-->
+<phpunit backupGlobals="false"
+         backupStaticAttributes="true"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
+</phpunit>
