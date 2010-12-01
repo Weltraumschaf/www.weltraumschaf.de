@@ -1,0 +1,9 @@
+#!/bin/bash
+
+basedir=$(dirname $0)
+
+phpunit $* --configuration $basedir/tests/phpunit.xml \
+        --bootstrap $basedir/tests/bootstrap.php \
+        --coverage-html $basedir/tests/coverage \
+        --coverage-clover $basedir/tests/coverage/clover.xml \
+        $basedir/tests/lib
