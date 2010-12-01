@@ -51,7 +51,30 @@ class CiteCollectionTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testLoadFromXml() {
-        $this->markTestIncomplete();
+        $xml = new SimpleXMLElement(file_get_contents(WS_TESTS_FIXURES_DIRECTORY . '/cites.xml'));
+        $collection = CiteCollection::loadFromXml($xml);
+        $this->assertType('CiteCollection', $collection);
+        $this->assertEquals(6, $collection->count());
+
+
+        $this->assertEquals('Jean-Jacques Rousseau', $collection[0]->getAuthor());
+        $this->assertEquals('', $collection[0]->getTitle());
+        $this->assertEquals('Es ist mehr wert, jederzeit die Achtung der Menschen zu haben, als
+        gelegentlich ihre Bewunderung.', $collection[0]->getText());
+
+        $this->assertEquals('Konrad Adenauer', $collection[1]->getAuthor());
+        $this->assertEquals('', $collection[1]->getTitle());
+        $this->assertEquals('Machen Sie sich erst einmal unbeliebt, dann werden Sie auch ernst
+        genommen.', $collection[1]->getText());
+
+        $this->assertEquals('George Bernard Shaw', $collection[2]->getAuthor());
+        $this->assertEquals('', $collection[2]->getTitle());
+        $this->assertEquals('Geld: ein Mittel, um alles zu haben bis auf einen aufrichtigen Freund,
+        eine uneigennützige Geliebte und eine gute Gesundheit.', $collection[2]->getText());
+
+        $this->assertEquals('Bla', $collection[5]->getAuthor());
+        $this->assertEquals('Blubb title', $collection[5]->getTitle());
+        $this->assertEquals('Albert Einstein', $collection[5]->getText());
     }
 
     public function testToJson() {
@@ -69,6 +92,12 @@ class CiteCollectionTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testLoadFromJson() {
+        $xml = new SimpleXMLElement(file_get_contents(WS_TESTS_FIXURES_DIRECTORY . '/cites.xml'));
+        $collection1 = CiteCollection::loadFromXml($xml);
+        $this->assertEquals(6, $collection1->count());
+        $collection2 = CiteCollection::loadFromJson($collection1->toJson());
+        $this->assertType('CiteCollection', $collection2);
+        $this->assertEquals(6, $collection2->count());
         $this->markTestIncomplete();
     }
 }

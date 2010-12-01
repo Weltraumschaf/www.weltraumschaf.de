@@ -14,15 +14,8 @@
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
-/**
- * Objects implementing this interface are able to render themselves to
- * a string representating them as JSON.
- */
-interface Jsonable {
-    /**
-     * Returns the implementing object as JSON string.
-     *
-     * @return string
-     */
-    public function toJson();
+class CiteProviderTest extends PHPUnit_Framework_TestCase {
+    public function testGetCollection() {
+        $this->markTestIncomplete();
+    }
 }

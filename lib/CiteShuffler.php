@@ -14,15 +14,25 @@
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
-/**
- * Objects implementing this interface are able to render themselves to
- * a string representating them as JSON.
- */
-interface Jsonable {
+class CiteShuffler {
     /**
-     * Returns the implementing object as JSON string.
-     *
-     * @return string
+     * @var CiteCollection
      */
-    public function toJson();
+    private $collection;
+
+    /**
+     * @param CiteCollection $collection
+     */
+    public function __construct(CiteCollection $collection) {
+        $this->collection = $collection;
+    }
+
+    /**
+     * @return Cite
+     */
+    public function getCite() {
+        $index = mt_rand(0, $this->collection->count() - 1);
+
+        return $this->collection[$index];
+    }
 }
