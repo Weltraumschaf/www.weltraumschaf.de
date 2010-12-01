@@ -62,7 +62,7 @@ class CiteCollection implements Countable, ArrayAccess, Jsonable {
             foreach ($this->cites as $index => $cite) {
                 /* @var $cite Cite */
                 if ($index > 0) {
-                    $jsonString .= ',';
+                    $jsonString .= ', ';
                 }
 
                 $jsonString .= $cite->toJson();
