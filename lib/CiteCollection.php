@@ -17,6 +17,10 @@
 require_once 'Jsonable.php';
 require_once 'Cite.php';
 
+/**
+ * @todo fix cache invalidation: delete json file when xml hgas changed. make md5 over
+ *       xml file content and save in cache file name. compare on loadeCache.
+ */
 class CiteCollection implements Countable, ArrayAccess, Jsonable {
     /**
      * @var array

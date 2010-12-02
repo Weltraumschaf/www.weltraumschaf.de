@@ -5,7 +5,7 @@
 	<?php echo girly(); ?>
         <title>Dinegn an denen das Weltraumschaf arbeitet</title>
         <meta name="description" content="Impressum" />
-        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, arbeiten" />
+        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Arbeiten" />
         <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
     </head>

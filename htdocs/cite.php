@@ -14,7 +14,7 @@ $cite         = $shuffler->getCite();
         <?php echo girly(); ?>
         <title>Dinegn an denen das Weltraumschaf arbeitet</title>
         <meta name="description" content="Impressum" />
-        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, arbeiten" />
+        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Zitate" />
         <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
     </head>
@@ -23,11 +23,11 @@ $cite         = $shuffler->getCite();
         <h1>Zitat</h1>
 
         <div id="cite">
-            <p><?php echo $cite->getText(); ?></p>
+            <p><?php echo htmlify($cite->getText()); ?></p>
             <p><em>
-            <?php echo $cite->getAuthor(); ?>
+            <?php echo htmlify($cite->getAuthor()); ?>
             <?php if ($cite->hastitle()): ?>
-                (<?php echo $cite->getTitle(); ?>)
+                (<?php echo htmlify($cite->getTitle()); ?>)
             <?php endif; ?>
             </em></p>
         </div>
