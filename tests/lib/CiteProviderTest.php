@@ -14,6 +14,8 @@
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
+require_once 'CiteProvider.php';
+
 class CiteProviderTest extends PHPUnit_Framework_TestCase {
     public function testGetCollection() {
         $this->markTestIncomplete();
