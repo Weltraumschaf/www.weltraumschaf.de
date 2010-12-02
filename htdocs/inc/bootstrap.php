@@ -14,22 +14,11 @@
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
-require_once dirname(__DIR__) . '/htdocs/inc/bootstrap.php';
-
 /**
- * Directory where the fixture files live.
+ * The root directory of the repo.
  */
-define('WS_TESTS_FIXURES_DIRECTORY', WS_ROOT_DIRECTORY . '/tests/fixtures');
-
-/*
-PHPUnit_Util_Filter::addDirectoryToFilter(PEAR_INSTALL_DIR);
-PHPUnit_Util_Filter::addDirectoryToFilter(PHP_LIBDIR);
-PHPUnit_Util_Filter::addFileToFilter(__FILE__, 'PHPUNIT');
-*/
-/*
- * Set error reporting to the level to which Console Library code must comply.
- */
-error_reporting( E_ALL | E_STRICT );
+define('WS_ROOT_DIRECTORY', dirname(dirname(__DIR__)));
+define('WS_DATA_DIRECTORY', WS_ROOT_DIRECTORY . '/data');
 
 /*
  * Prepend the lib/ and tests/ directories to the nclude_path. This allows the
@@ -38,6 +27,7 @@ error_reporting( E_ALL | E_STRICT );
  */
 set_include_path(implode(PATH_SEPARATOR, array(
     WS_ROOT_DIRECTORY . '/lib',
-    WS_ROOT_DIRECTORY . '/tests',
     get_include_path()
 )));
+
+require_once 'girly.php';

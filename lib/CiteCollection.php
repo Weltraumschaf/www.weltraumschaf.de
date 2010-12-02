@@ -15,6 +15,7 @@
  */
 
 require_once 'Jsonable.php';
+require_once 'Cite.php';
 
 class CiteCollection implements Countable, ArrayAccess, Jsonable {
     /**

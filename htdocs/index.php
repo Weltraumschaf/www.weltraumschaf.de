@@ -1,7 +1,8 @@
+<?php require_once 'inc/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php include 'inc/girly.php'; ?>
+	<?php echo girly(); ?>
         <title>Hier wohnt das Weltraumschaf</title>
         <meta name="description" content="Private Website von Sven Strittmatter" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />

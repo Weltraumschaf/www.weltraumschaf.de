@@ -1,7 +1,8 @@
+<?php require_once 'inc/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php include 'inc/girly.php'; ?>
+	<?php echo girly(); ?>
         <title>Dinegn an denen das Weltraumschaf arbeitet</title>
         <meta name="description" content="Impressum" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, arbeiten" />

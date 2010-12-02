@@ -1,15 +1,5 @@
 <?php
-/**
- * The root directory of the repo.
- */
-define('WS_ROOT_DIRECTORY', dirname(__DIR__));
-define('WS_DATA_DIRECTORY', WS_ROOT_DIRECTORY . '/data');
-
-set_include_path(implode(PATH_SEPARATOR, array(
-    WS_ROOT_DIRECTORY . '/lib',
-    get_include_path()
-)));
-
+require_once 'inc/bootstrap.php';
 require_once 'CiteProvider.php';
 require_once 'CiteShuffler.php';
 
@@ -21,7 +11,7 @@ $cite         = $shuffler->getCite();
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php include 'inc/girly.php'; ?>
+        <?php echo girly(); ?>
         <title>Dinegn an denen das Weltraumschaf arbeitet</title>
         <meta name="description" content="Impressum" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, arbeiten" />
@@ -36,7 +26,7 @@ $cite         = $shuffler->getCite();
             <p><?php echo $cite->getText(); ?></p>
             <p><em>
             <?php echo $cite->getAuthor(); ?>
-            <?php if ($this->hastitle()): ?>
+            <?php if ($cite->hastitle()): ?>
                 (<?php echo $cite->getTitle(); ?>)
             <?php endif; ?>
             </em></p>
