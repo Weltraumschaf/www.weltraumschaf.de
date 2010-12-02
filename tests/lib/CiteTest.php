@@ -43,10 +43,10 @@ class CiteTest extends PHPUnit_Framework_TestCase {
 
     public function testToJson() {
         $cite = new Cite();
-        $this->assertEquals("{author: '', title: '', text: ''}", $cite->toJson());
+        $this->assertEquals('{"author": "", "title": "", "text": ""}', $cite->toJson());
         $cite->setAuthor('foo');
         $cite->setTitle('bar');
         $cite->setText('baz');
-        $this->assertEquals("{author: 'foo', title: 'bar', text: 'baz'}", $cite->toJson());
+        $this->assertEquals('{"author": "foo", "title": "bar", "text": "baz"}', $cite->toJson());
     }
 }

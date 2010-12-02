@@ -17,8 +17,17 @@
 require_once 'Jsonable.php';
 
 class Cite implements Jsonable {
+    /**
+     * @var string
+     */
     private $author = '';
+    /**
+     * @var string
+     */
     private $title  = '';
+    /**
+     * @var string
+     */
     private $text   = '';
 
     public function  __construct($data = null) {
@@ -31,6 +40,22 @@ class Cite implements Jsonable {
                 throw new InvalidArgumentException("Can not handle passed argeument of type " . gettype($data) . "!");
             }
         }
+    }
+
+    /**
+     *
+     * @param string $string
+     * @return string
+     */
+    public function sanitize($s) {
+        $s = trim($s);
+        $s = str_replace(array("\n", "\r", "\t"), '', $s);
+
+        while (false !== strpos($s, '  ')) {
+            $s = str_replace('  ', ' ', $s);
+        }
+
+        return $s;
     }
 
     public function fromArray(array $data) {
@@ -50,7 +75,7 @@ class Cite implements Jsonable {
     }
 
     public function setAuthor($name) {
-        $this->author = (string) $name;
+        $this->author = $this->sanitize($name);
     }
 
     public function getAuthor() {
@@ -58,7 +83,7 @@ class Cite implements Jsonable {
     }
 
     public function setTitle($title) {
-        $this->title = (string) $title;
+        $this->title = $this->sanitize($title);
     }
 
     public function getTitle() {
@@ -70,7 +95,7 @@ class Cite implements Jsonable {
     }
 
     public function setText($text) {
-        $this->text = (string) $text;
+        $this->text = $this->sanitize($text);
     }
 
     public function getText() {
@@ -78,6 +103,8 @@ class Cite implements Jsonable {
     }
 
     public function  toJson() {
-        return "{author: '{$this->author}', title: '{$this->title}', text: '{$this->text}'}";
+        return '{"author": "' . $this->author . '", ' .
+                '"title": "' . $this->title . '", ' .
+                '"text": "' . $this->text . '"}';
     }
 }

@@ -59,18 +59,18 @@ class CiteCollectionTest extends PHPUnit_Framework_TestCase {
 
         $this->assertEquals('Jean-Jacques Rousseau', $collection[0]->getAuthor());
         $this->assertEquals('', $collection[0]->getTitle());
-        $this->assertEquals('Es ist mehr wert, jederzeit die Achtung der Menschen zu haben, als
-        gelegentlich ihre Bewunderung.', $collection[0]->getText());
+        $this->assertEquals('Es ist mehr wert, jederzeit die Achtung der Menschen zu haben, als gelegentlich ihre Bewunderung.',
+                            $collection[0]->getText());
 
         $this->assertEquals('Konrad Adenauer', $collection[1]->getAuthor());
         $this->assertEquals('', $collection[1]->getTitle());
-        $this->assertEquals('Machen Sie sich erst einmal unbeliebt, dann werden Sie auch ernst
-        genommen.', $collection[1]->getText());
+        $this->assertEquals('Machen Sie sich erst einmal unbeliebt, dann werden Sie auch ernst genommen.',
+                            $collection[1]->getText());
 
         $this->assertEquals('George Bernard Shaw', $collection[2]->getAuthor());
         $this->assertEquals('', $collection[2]->getTitle());
-        $this->assertEquals('Geld: ein Mittel, um alles zu haben bis auf einen aufrichtigen Freund,
-        eine uneigennützige Geliebte und eine gute Gesundheit.', $collection[2]->getText());
+        $this->assertEquals('Geld: ein Mittel, um alles zu haben bis auf einen aufrichtigen Freund, eine uneigennützige Geliebte und eine gute Gesundheit.',
+                            $collection[2]->getText());
 
         $this->assertEquals('Bla', $collection[5]->getAuthor());
         $this->assertEquals('Blubb title', $collection[5]->getTitle());
@@ -98,6 +98,19 @@ class CiteCollectionTest extends PHPUnit_Framework_TestCase {
         $collection2 = CiteCollection::loadFromJson($collection1->toJson());
         $this->assertType('CiteCollection', $collection2);
         $this->assertEquals(6, $collection2->count());
-        $this->markTestIncomplete();
+
+        $this->assertEquals('Thomas Carlyle', $collection2[3]->getAuthor());
+        $this->assertEquals('', $collection2[3]->getTitle());
+        $this->assertEquals('Der schlimmste aller Fehler ist, sich keines solchen bewusst zu sein.',
+                            $collection2[3]->getText());
+
+        $this->assertEquals('Albert Einstein', $collection2[4]->getAuthor());
+        $this->assertEquals('', $collection2[4]->getTitle());
+        $this->assertEquals('Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt.',
+                            $collection2[4]->getText());
+
+        $this->assertEquals('Bla', $collection2[5]->getAuthor());
+        $this->assertEquals('Blubb title', $collection2[5]->getTitle());
+        $this->assertEquals('Albert Einstein', $collection2[5]->getText());
     }
 }
