@@ -11,8 +11,8 @@ $cite         = $shuffler->getCite();
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <?php echo girly(); ?>
-        <title>Dinegn an denen das Weltraumschaf arbeitet</title>
+        <?php echo girly(WS_DATA_DIRECTORY . '/girly'); ?>
+        <title>Zitate die das Weltraumschaf gut findet</title>
         <meta name="description" content="Impressum" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Zitate" />
         <?php include 'inc/head_include.html'; ?>
@@ -20,7 +20,7 @@ $cite         = $shuffler->getCite();
     </head>
 
     <body>
-        <h1>Zitat</h1>
+        <h1>Ein Zitat das Weltraumschaf gut findet</h1>
 
         <div id="cite">
             <p><?php echo htmlify($cite->getText()); ?></p>

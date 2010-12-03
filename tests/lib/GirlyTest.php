@@ -9,24 +9,17 @@
  * you can buy me a beer in return.
  *
  * @author    Weltraumschaf
- * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
+ * @copyright Copyright (c) 03.12.2010, Sven Strittmatter.
  * @version   0.2
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
-/**
- * @return string
- */
-function girly($file) {
-    $girly = false;
+require_once 'girly.php';
 
-    if (is_readable($file)) {
-        $girly = file_get_contents($file);
-    }
-    
-    if ($girly) {
-        return "<!--\n$girly\n-->\n";
-    } else {
-        return '';
+class GirlyTest extends PHPUnit_Framework_TestCase {
+    public function testFunction() {
+        $this->assertEquals('', girly('/does/not/exist'));
+        $this->assertEquals("<!--\n" . file_get_contents(WS_DATA_DIRECTORY . '/girly'). "\n-->\n",
+                            girly(WS_DATA_DIRECTORY . '/girly'));
     }
 }

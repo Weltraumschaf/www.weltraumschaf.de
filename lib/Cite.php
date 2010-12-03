@@ -61,7 +61,11 @@ class Cite implements Jsonable {
     public function fromArray(array $data) {
         foreach ($data as $key => $value) {
             $setterName = 'set' . ucfirst($key);
-            $this->$setterName($value);
+            try {
+                $this->$setterName($value);
+            } catch (BadMethodCallException $e) {
+                throw new InvalidArgumentException("Can not set property '$key'!");
+            }
         }
     }
 

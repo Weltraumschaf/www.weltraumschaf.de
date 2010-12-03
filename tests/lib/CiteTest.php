@@ -49,4 +49,31 @@ class CiteTest extends PHPUnit_Framework_TestCase {
         $cite->setText('baz');
         $this->assertEquals('{"author": "foo", "title": "bar", "text": "baz"}', $cite->toJson());
     }
+
+    public function testHasTitle() {
+        $cite = new Cite();
+        $this->assertFalse($cite->hasTitle());
+        $cite = new Cite(array('author' => 'foo', 'text' => 'bar'));
+        $this->assertFalse($cite->hasTitle());
+        $cite = new Cite(array('author' => 'foo', 'text' => 'bar', 'title' => 'baz'));
+        $this->assertTrue($cite->hasTitle());
+    }
+
+    public function testBadMethodCall() {
+        try {
+            $cite = new Cite();
+            $cite->foo();
+            $this->fail('Call to unknown method should throw an exception!');
+        } catch (BadMethodCallException $e) {
+            $this->assertEquals('Can not handle method call to \'foo\'!', $e->getMessage());
+        }
+
+        try {
+            $cite = new Cite(array('foo' => 'bar'));
+            $cite->foo();
+            $this->fail('Construct with unknown property should throw an exception!');
+        } catch (InvalidArgumentException $e) {
+            $this->assertEquals('Can not set property \'foo\'!', $e->getMessage());
+        }
+    }
 }

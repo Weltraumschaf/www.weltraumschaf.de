@@ -15,15 +15,14 @@
  */
 
 /**
- *
  * @staticvar array $search
  * @staticvar array $replace
  * @param string $string
  * @return string
  */
 function htmlify($string) {
-    static $search  = array('ä',      'ö',      'ü',      'Ä',      'Ö',      'Ü',      'ß');
-    static $replace = array('&auml;', '&ouml;', '&uuml;', '&Auml;', '&Ouml;', '&Uuml;', '&szlig;');
+    static $search  = array('ä',      'ö',      'ü',      'Ä',      'Ö',      'Ü',      'ß',       '...');
+    static $replace = array('&auml;', '&ouml;', '&uuml;', '&Auml;', '&Ouml;', '&Uuml;', '&szlig;', '&hellip;');
 
     $string = (string)$string;
     $string = str_replace($search, $replace, $string);

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-	<?php echo girly(); ?>
+	<?php echo girly(WS_DATA_DIRECTORY . '/girly'); ?>
         <title>Dinegn an denen das Weltraumschaf arbeitet</title>
         <meta name="description" content="Impressum" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Arbeiten" />
