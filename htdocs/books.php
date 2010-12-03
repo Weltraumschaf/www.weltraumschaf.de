@@ -19,15 +19,15 @@ require_once 'inc/bootstrap.php';
 <html lang="de">
     <head>
         <?php echo girly(WS_DATA_DIRECTORY . '/girly'); ?>
-        <title>Photos die das Weltraumschaf geschossen hat</title>
+        <title>B&uuml;cher die das Weltraumschaf empfehlen kann</title>
         <meta name="description" content="Impressum" />
-        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Bilder" />
+        <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, B&uuml;cher" />
         <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
     </head>
 
     <body>
-        <h1>Ein Bild vom Weltraumschaf</h1>
+        <h1>B&uuml;cher die sich zu lesen lohnt</h1>
 
         <div id="photo"></div>
 

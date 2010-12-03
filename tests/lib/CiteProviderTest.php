@@ -15,18 +15,19 @@
  */
 
 require_once 'CiteProvider.php';
-//require_once 'vfsStream/vfsStream.php';
+require_once 'vfsStream/vfsStream.php';
 
 class CiteProviderTest extends PHPUnit_Framework_TestCase {
     protected function setUp() {
-//        vfsStreamWrapper::register();
-//        vfsStreamWrapper::setRoot(new vfsStreamFile('/tmp'));
+        vfsStreamWrapper::register();
+        vfsStreamWrapper::setRoot(new vfsStreamFile('/tmp'));
     }
 
     public function testGetCollection() {
-//        $fileInfo = new SplFileInfo('/tmp/cites.xml');
-//        echo "\nATime: {$fileInfo->getATime()}\n";
-//        echo "CTime: {$fileInfo->getCTime()}\n";
-//        echo "MTime: {$fileInfo->getMTime()}\n";
+        $this->markTestIncomplete();
+    }
+
+    public function testInvalidateCache() {
+        $this->markTestIncomplete();
     }
 }
