@@ -17,22 +17,32 @@
 require_once 'CiteCollection.php';
 
 class CiteProvider {
+    /**
+     * @var SplFileInfo
+     */
     private $dataFile;
+    /**
+     * @var SplFileInfo
+     */
     private $cacheFile;
+    /**
+     * @var CiteCollection
+     */
     private $collection;
 
     public function  __construct($file, $tmp = '/tmp') {
-        $this->dataFile = (string) $file;
+        $file = (string) $file;
 
-        if (!file_exists($this->dataFile)) {
-            throw new InvalidArgumentException("File does not exits '{$this->dataFile}'!");
+        if (!file_exists($file)) {
+            throw new InvalidArgumentException("File does not exits '{$file}'!");
         }
 
-        if (!is_readable($this->dataFile)) {
-            throw new InvalidArgumentException("File is not readable '{$this->dataFile}'!");
+        if (!is_readable($file)) {
+            throw new InvalidArgumentException("File is not readable '{$file}'!");
         }
 
-        $this->cacheFile = $tmp . '/' . basename($this->dataFile) . '.json';
+        $this->dataFile  = new SplFileInfo($file);
+        $this->cacheFile = new SplFileInfo($tmp . '/' . basename($file) . '.json');
     }
 
     protected function loadCollection() {
@@ -53,10 +63,10 @@ class CiteProvider {
     }
     
     protected function loadOriginFile() {
-        $xmlString = file_get_contents($this->dataFile);
+        $xmlString = file_get_contents($this->dataFile->getPathname());
 
         if (false === $xmlString) {
-            throw new InvalidArgumentException("Can not read file content from '{$this->dataFile}'!");
+            throw new InvalidArgumentException("Can not read file content from '{$this->dataFile->getPathname()}'!");
         }
 
         $xml = new SimpleXMLElement($xmlString);
@@ -65,14 +75,18 @@ class CiteProvider {
     }
 
     protected function loadCachedFile() {
-        if (!file_exists($this->cacheFile)) {
+        if (!$this->cacheFile->isReadable()) {
             return null;
         }
 
-        $jsonString = file_get_contents($this->cacheFile);
+        if ($this->cacheFile->getMTime() < $this->dataFile->getMTime()) {
+            return null;
+        }
+        
+        $jsonString = file_get_contents($this->cacheFile->getPathname());
 
         if (false === $jsonString) {
-            throw new InvalidArgumentException("Can not read file content from '{$this->cacheFile}'!");
+            throw new InvalidArgumentException("Can not read file content from '{$this->cacheFile->getPathname()}'!");
         }
 
         return CiteCollection::loadFromJson($jsonString);
