@@ -14,7 +14,7 @@
    @version   0.2
    @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  -->
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:sc="http://www.kwick.de/2010/ML">
     <head>
 	<?php echo girly(WS_DATA_DIRECTORY . '/girly'); ?>
         <title>Hier wohnt das Weltraumschaf</title>
@@ -22,10 +22,13 @@
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
         <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
+        <script type="text/javascript" src="http://www.kwick.de/widget/all.js"></script> <sc:fan userid="5019692"></sc:fan>
     </head>
     <body>
         <h1>Hier wohnt das Weltraumschaf</h1>
 
+		<sc:fan userid="5019692" show-personal-data="0" show-profile-picture="0" show-gender-and-age="0"></sc:fan>
+        
         <ul id="profiles">
             <li>
                 <a href="http://blog.weltraumschaf.de/" title="Mein Blog">
