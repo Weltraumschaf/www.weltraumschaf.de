@@ -18,9 +18,10 @@ require_once 'CiteProvider.php';
 require_once 'vfsStream/vfsStream.php';
 
 class CiteProviderTest extends PHPUnit_Framework_TestCase {
+
     protected function setUp() {
-        vfsStreamWrapper::register();
-        vfsStreamWrapper::setRoot(new vfsStreamFile('/tmp'));
+        //vfsStreamWrapper::register();
+        //vfsStreamWrapper::setRoot(new vfsStreamFile('/tmp'));
     }
 
     public function testGetCollection() {

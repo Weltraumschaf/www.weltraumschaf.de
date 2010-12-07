@@ -29,6 +29,9 @@ class HtmlifyTest extends PHPUnit_Framework_TestCase {
 
         $this->assertEquals('&szlig;', htmlify('ß'));
         $this->assertEquals('&hellip;', htmlify('...'));
+        $this->assertEquals('&amp;', htmlify('&'));
+        $this->assertEquals('&apos;', htmlify("'"));
+        $this->assertEquals('&quot;', htmlify('"'));
 
         $this->assertEquals('Der &Auml;rger ist gro&szlig;, wenn man es &uuml;bertrteibt.',
                             htmlify('Der Ärger ist groß, wenn man es übertrteibt.'));
