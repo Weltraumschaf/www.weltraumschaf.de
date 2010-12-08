@@ -75,10 +75,12 @@
         <ul id="links">
             <li>
                 <a href="./work.php" title="Arbeiten vom Weltraumschaf">
-                    Arbeiten</a> &mdash;
-                <a href="./impressum.php" title="Lizenz und so&hellip;">Impressum</a> &mdash;
+                    Arbeiten</a> &ndash;
+                    <a href="./cite.php" title="Ein Zitat das Weltraumschaf gut findet">
+                    Zitat</a> &ndash;
+                <a href="./impressum.php" title="Lizenz und so&hellip;">Impressum</a> &ndash;
                 <a class="contact" title="E-Mail an mich">
-                    ich(at)weltraumschaf(dot)de</a> &mdash;
+                    ich(at)weltraumschaf(dot)de</a> &ndash;
                 <a href="http://www.cacert.org/index.php?id=3" title="Braucht man f&uuml;r https://www.weltraumschaf.de">
                     Root-Zertifikate von CAcert</a>
             </li>

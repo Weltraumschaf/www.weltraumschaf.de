@@ -47,9 +47,7 @@ $cite         = $shuffler->getCite();
         </div>
 
         <ul id="links">
-            <li>
-                <a href="./index.php">zur&uuml;ck</a>
-            </li>
+            <?php include 'inc/backlink.html'; ?>
         </ul>
 
         <?php include 'inc/body_javascript.html'; ?>
