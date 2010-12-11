@@ -22,12 +22,13 @@
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
         <?php include 'inc/head_include.html'; ?>
         <?php include 'inc/head_javascript.html'; ?>
-        <script type="text/javascript" src="http://www.kwick.de/widget/all.js"></script> <sc:fan userid="5019692"></sc:fan>
+        <script type="text/javascript" src="http://www.kwick.de/widget/all.js"></script>
     </head>
     <body>
         <h1>Hier wohnt das Weltraumschaf</h1>
 
-		<sc:fan userid="5019692" show-personal-data="0" show-profile-picture="0" show-gender-and-age="0"></sc:fan>
+	<sc:fan userid="5019692" show-personal-data="0" show-profile-picture="0"
+                show-gender-and-age="0"></sc:fan>
         
         <ul id="profiles">
             <li>
