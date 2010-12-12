@@ -17,7 +17,7 @@
 require_once 'Jsonable.php';
 require_once 'AbstractModel.php';
 
-class Cite extends AbstractModel implements Jsonable {
+class Book extends AbstractModel implements Jsonable {
     /**
      * @var string
      */
@@ -29,7 +29,15 @@ class Cite extends AbstractModel implements Jsonable {
     /**
      * @var string
      */
-    private $text   = '';
+    private $coverPicture = '';
+    /**
+     * @var string
+     */
+    private $affiliateUrl = '';
+    /**
+     * @var string
+     */
+    private $description = '';
 
     public function setAuthor($name) {
         $this->author = $this->sanitize($name);
@@ -47,19 +55,31 @@ class Cite extends AbstractModel implements Jsonable {
         return $this->title;
     }
 
-    public function hasTitle() {
-        return !empty($this->title);
+    public function setCoverPicture($url) {
+        $this->coverPicture = (string) $url;
     }
 
-    public function setText($text) {
-        $this->text = $this->sanitize($text);
+    public function getCoverPicture() {
+        return $this->coverPicture;
     }
 
-    public function getText() {
-        return $this->text;
+    public function setAffiliateUrl($url) {
+        $this->affiliateUrl = (string) $url;
+    }
+
+    public function getAffiliateUrl() {
+        return $this->affiliateUrl;
+    }
+
+    public function setDescription($desc) {
+        $this->description = $this->sanitize($desc);
+    }
+
+    public function getDescription() {
+        return $this->description;
     }
 
     public function  toJson() {
-        return $this->generateJson(array('author', 'title', 'text'));
+        return $this->generateJson(array('author', 'title', 'coverPicture', 'affiliateUrl',  'description'));
     }
 }
