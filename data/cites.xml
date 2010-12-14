@@ -37,4 +37,9 @@
         <author>Sigmund Freud</author>
         <text>Lieben und arbeiten.</text>
     </cite>
+    <cite>
+    	<author>Alan Perlis</author>
+		<text>A programming language is low level when its programs require
+		attention to the irrelevant.</text>
+    </cite>
 </cites>
