@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model>
+    <entity name="Cite">
+        <property name="author" type="string" />
+        <property name="title" type="string" />
+        <property name="text" type="string" />
+    </entity>
+    
+    <entity name="Book">
+        <property name="author" type="string" />
+        <property name="title" type="string" />
+        <property name="coverPicture" type="string" />
+        <property name="affiliateUrl" type="string" />
+        <property name="description" type="string" />
+    </entity>
+</model>
