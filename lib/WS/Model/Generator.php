@@ -1,4 +1,18 @@
 <?php
+/**
+ * LICENSE
+ *
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * "Sven Strittmatter" <ich@weltraumschaf.de> wrote this file.
+ * As long as you retain this notice you can do whatever you want with
+ * this stuff. If we meet some day, and you think this stuff is worth it,
+ * you can buy me a beer in return.
+ *
+ * @author    Weltraumschaf
+ * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
+ * @version   0.2
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ */
 
 require_once 'WS/Model/Template/Factory.php';
 require_once 'WS/Model/File.php';
@@ -54,6 +68,7 @@ class WS_Model_Generator {
                 $classTpl  = $this->tplFactory->createClassTemplate();
                 $classTpl->setName($className);
                 $classTpl->setBaseClass('WS_Model_AbstractBase');
+                $classTpl->addMethod($this->generateBaseClassConstructor($entity));
                 $this->generateEntiyProperties($classTpl, $entity);
                 $classTpls[] = $classTpl;
             }
@@ -159,6 +174,38 @@ class WS_Model_Generator {
         $methodTpl->setModifier($modifier);
         $methodTpl->setName($name);
 
+        return $methodTpl;
+    }
+
+    /**
+     *
+     * @param WS_Model_Xml_Entity $entity
+     * @return WS_Model_Template_Method
+     */
+    protected function generateBaseClassConstructor(WS_Model_Xml_Entity $entity) {
+        $methodTpl = $this->generateMethod('__construct', WS_Model_Template_Abstract::MODIFIER_PUBLIC);
+        $body      = 'parent::__construct(array(';
+
+        if ($entity->countProperties()) {
+            $body .= PHP_EOL;
+            $index = 0;
+            foreach ($entity->getProperties() as $property) {
+                /* @var $property WS_Model_Xml_Property */
+                if ($index > 0) {
+                    $body .= ',' . PHP_EOL;
+                }
+
+                $body .= WS_Model_Template_Abstract::getIndentation(3);
+                $body .= "'{$property->getName()}'";
+                $index++;
+            }
+
+            $body .= PHP_EOL . WS_Model_Template_Abstract::getIndentation(2);
+        }
+
+        $body .= '));';
+        $methodTpl->setBody($body);
+        
         return $methodTpl;
     }
 }

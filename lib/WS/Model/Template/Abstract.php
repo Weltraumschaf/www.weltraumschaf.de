@@ -1,4 +1,18 @@
 <?php
+/**
+ * LICENSE
+ *
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * "Sven Strittmatter" <ich@weltraumschaf.de> wrote this file.
+ * As long as you retain this notice you can do whatever you want with
+ * this stuff. If we meet some day, and you think this stuff is worth it,
+ * you can buy me a beer in return.
+ *
+ * @author    Weltraumschaf
+ * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
+ * @version   0.2
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ */
 
 abstract class WS_Model_Template_Abstract {
     const NAME_DELIMITER = '#';
@@ -8,6 +22,11 @@ abstract class WS_Model_Template_Abstract {
     const MODIFIER_PROTECTED = 'protected';
     const MODIFIER_PUBLIC    = 'public';
 
+    /**
+     * Used to check assigned modifiers against.
+     * 
+     * @var array
+     */
     private static $allowedModifiers = array(
         self::MODIFIER_PRIVATE,
         self::MODIFIER_PROTECTED,
@@ -15,12 +34,14 @@ abstract class WS_Model_Template_Abstract {
     );
     
     /**
+     * The file name of the template.
      *
      * @var string
      */
     private $tplFile;
     /**
-     *
+     * Key value assigned templaet variables.
+     * 
      * @var array
      */
     private $assignedVars;

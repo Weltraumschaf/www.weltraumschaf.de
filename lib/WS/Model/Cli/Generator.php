@@ -1,15 +1,63 @@
 <?php
+/**
+ * LICENSE
+ *
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * "Sven Strittmatter" <ich@weltraumschaf.de> wrote this file.
+ * As long as you retain this notice you can do whatever you want with
+ * this stuff. If we meet some day, and you think this stuff is worth it,
+ * you can buy me a beer in return.
+ *
+ * @author    Weltraumschaf
+ * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
+ * @version   0.2
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ */
 
+/**
+ * @see WS_Model_Xml_ConfigLoader
+ */
 require_once 'WS/Model/Xml/ConfigLoader.php';
+/**
+ * @see  WS_Model_Xml_ConfigParser
+ */
 require_once 'WS/Model/Xml/ConfigParser.php';
+/**
+ * @see  WS_Model_Generator
+ */
 require_once 'WS/Model/Generator.php';
 
+/**
+ * This class holds the logic for the genarator script in bin/wsmodel
+ */
 class WS_Model_Cli_Generator {
+    /**
+     * The version of ws-model
+     */
     const VERSION = '0.2';
-    
+    /**
+     * The name of the executing script. Usualy 'wsmodel'.
+     *
+     * @var string
+     */
     private $scriptName;
+    /**
+     * Count of command line arguments.
+     *
+     * @var array
+     */
     private $argc;
+    /**
+     * The passed command line argument.
+     *
+     * @var array
+     */
     private $argv;
+    /**
+     * The current working directory.
+     * 
+     * @var string
+     */
     private $cwd;
 
     public static function main($cwd, array $argv = array()) {
