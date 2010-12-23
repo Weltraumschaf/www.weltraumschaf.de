@@ -1,5 +1,7 @@
 <?php
 /**
+ * ws-model
+ *
  * LICENSE
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -8,16 +10,39 @@
  * this stuff. If we meet some day, and you think this stuff is worth it,
  * you can buy me a beer in return.
  *
- * @author    Weltraumschaf
- * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
- * @version   0.2
+ * PHP version 5
+ *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 
+/**
+ * @see WS_Model_IToArray
+ */
 require_once 'WS/Model/IToArray.php';
+/**
+ * @see WS_Model_IToJson
+ */
 require_once 'WS/Model/IToJson.php';
+/**
+ * @see WS_Model_IToStdClass
+ */
 require_once 'WS/Model/IToStdClass.php';
 
+/**
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
+ */
 abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJson, WS_Model_IToStdClass {
     private $propertyNames;
 

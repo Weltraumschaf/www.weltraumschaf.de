@@ -35,12 +35,7 @@ require_once 'WS/Model/Template/Abstract.php';
  * @version   0.3
  * @link      https://github.com/Weltraumschaf/ws-view
  */
-class WS_Model_Template_Property extends WS_Model_Template_Abstract {
-    public function setModifier($modifier) {
-        $this->expectValidModifier($modifier);
-        $this->assignVar('MODIFIER', (string) $modifier);
-    }
-
+class WS_Model_Template_DocComment_Annotation extends WS_Model_Template_Abstract {
     public function setName($name) {
         $this->assignVar('NAME', (string) $name);
     }
@@ -49,30 +44,27 @@ class WS_Model_Template_Property extends WS_Model_Template_Abstract {
         return $this->getAssignedVar('NAME');
     }
 
-    public function setDefault($value) {
-        $this->assignVar('DEFAULT', (string) $value);
+    public function setText($text) {
+        $this->assignVar('TEXT', (string) $text);
     }
-    
+
+    public function getText() {
+        return $this->getAssignedVar('TEXT');
+    }
     public function render() {
         if (!$this->hasAssignedVar('NAME')) {
             throw new Exception("Does not have required variable 'NAME' assigned!");
         }
 
-        if (!$this->hasAssignedVar('MODIFIER')) {
-            throw new Exception("Does not have required variable 'MODIFIER' assigned!");
-        }
-
         $string = $this->readTemplate();
-        $string = self::replaceVarToken($string, 'MODIFIER', $this->getAssignedVar('MODIFIER'));
-        $string = self::replaceVarToken($string, 'NAME', $this->getAssignedVar('NAME'));
+        $string = self::replaceVarToken($string, 'NAME', $this->getName());
 
-        if ($this->hasAssignedVar('DEFAULT')) {
-            $string = self::replaceVarToken($string, 'DEFAULT',
-                                            ' = ' . $this->getAssignedVar('DEFAULT'));
+        if ($this->hasAssignedVar('TEXT')) {
+            $string = self::replaceVarToken($string, 'TEXT', ' ' . $this->getText());
         } else {
-            $string = self::replaceVarToken($string, 'DEFAULT');
+            $string = self::replaceVarToken($string, 'TEXT');
         }
-        
+
         return $string;
     }
 }

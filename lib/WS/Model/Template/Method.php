@@ -1,5 +1,7 @@
 <?php
 /**
+ * ws-model
+ *
  * LICENSE
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -8,10 +10,15 @@
  * this stuff. If we meet some day, and you think this stuff is worth it,
  * you can buy me a beer in return.
  *
- * @author    Weltraumschaf
- * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
- * @version   0.2
+ * PHP version 5
+ *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 
 /**
@@ -24,7 +31,13 @@ require_once 'WS/Model/Template/Abstract.php';
 require_once 'WS/Model/Template/Argument.php';
 
 /**
- *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 class WS_Model_Template_Method extends WS_Model_Template_Abstract {
     /**
@@ -65,7 +78,7 @@ class WS_Model_Template_Method extends WS_Model_Template_Abstract {
     }
 
     public function isAbstract() {
-        return $this->hasAssignedVar('ABSTRACT') && '' !== $this->getAssignedVar('ABSTRACT');
+        return $this->hasAssignedVar('ABSTRACT');
     }
 
     public function setStatic($switch = true) {
@@ -74,6 +87,10 @@ class WS_Model_Template_Method extends WS_Model_Template_Abstract {
         } else {
             $this->assignVar('STATIC', '');
         }
+    }
+
+    public function isStatic() {
+        return $this->hasAssignedVar('STATIC');
     }
 
     public function addArgument(WS_Model_Template_Argument $a) {

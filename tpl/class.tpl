@@ -1,5 +1,0 @@
-#BASE_CLASS_REQUIRE#
-abstract class #NAME##BASE_CLASS_NAME# {
-#PROPERTIES#
-#METHODS#
-}

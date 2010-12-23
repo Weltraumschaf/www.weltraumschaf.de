@@ -1,5 +1,7 @@
 <?php
 /**
+ * ws-model
+ *
  * LICENSE
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -8,10 +10,15 @@
  * this stuff. If we meet some day, and you think this stuff is worth it,
  * you can buy me a beer in return.
  *
- * @author    Weltraumschaf
- * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
- * @version   0.2
+ * PHP version 5
+ *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 
 /**
@@ -27,9 +34,9 @@ require_once 'WS/Model/Template/Class.php';
  */
 require_once 'WS/Model/Template/DocComment.php';
 /**
- * @see WS_Model_Template_DocComment_Argument
+ * @see WS_Model_Template_DocComment_Annotation
  */
-require_once 'WS/Model/Template/DocComment/Argument.php';
+require_once 'WS/Model/Template/DocComment/Annotation.php';
 /**
  * @see WS_Model_Template_Method
  */
@@ -39,7 +46,20 @@ require_once 'WS/Model/Template/Method.php';
  */
 require_once 'WS/Model/Template/Property.php';
 
+/**
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
+ */
 class WS_Model_Template_Factory {
+    /**
+     * Relativ path to default template directory.
+     */
+    const DEFAULT_TPL_DIR = 'tpl';
     /**
      * Default file extension for template files.
      */
@@ -55,7 +75,13 @@ class WS_Model_Template_Factory {
      */
     private $templateExtension;
 
-    public function  __construct($templateDir, $templateExtension = self::DEFAULT_TPL_EXT) {
+    public function  __construct($templateDir = null, $templateExtension = self::DEFAULT_TPL_EXT) {
+        if (null === $templateDir) {
+            $templateDir = __DIR__ . DIRECTORY_SEPARATOR . self::DEFAULT_TPL_DIR;
+        }
+
+        $templateDir       = (string) $templateDir;
+        $templateExtension = (string) $templateExtension;
         $this->templateDir = $templateDir;
 
         if ($templateExtension[0] !== '.') {
@@ -102,8 +128,8 @@ class WS_Model_Template_Factory {
      *
      * @return WS_Model_Template_DocComment_Argument
      */
-    public function createDocCommentArgumentTemplate() {
-        return new WS_Model_Template_DocComment_Argument($this->generateFileName('doccomment/argument'));
+    public function createDocCommentAnnotationTemplate() {
+        return new WS_Model_Template_DocComment_Annotation($this->generateFileName('doccomment/annotation'));
     }
 
     /**

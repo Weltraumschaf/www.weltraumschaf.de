@@ -1,5 +1,7 @@
 <?php
 /**
+ * ws-model
+ *
  * LICENSE
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -8,10 +10,15 @@
  * this stuff. If we meet some day, and you think this stuff is worth it,
  * you can buy me a beer in return.
  *
- * @author    Weltraumschaf
- * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
- * @version   0.2
+ * PHP version 5
+ *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 
 /**
@@ -29,6 +36,14 @@ require_once 'WS/Model/Generator.php';
 
 /**
  * This class holds the logic for the genarator script in bin/wsmodel
+ *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 class WS_Model_Cli_Generator {
     /**
@@ -140,7 +155,7 @@ class WS_Model_Cli_Generator {
         $loader     = new WS_Model_Xml_ConfigLoader($configFile);
         $parser     = new WS_Model_Xml_ConfigParser($loader);
         $model      = $parser->parse();
-        $tplFactory = new WS_Model_Template_Factory(WS_MODEL_ROOT_DIRECTORY . '/tpl');
+        $tplFactory = new WS_Model_Template_Factory();
         $generator  = new WS_Model_Generator($model, $tplFactory);
         $classFiles = $generator->generateFiles();
         $this->echoLine("Write class files to {$targetDir}.");

@@ -1,5 +1,7 @@
 <?php
 /**
+ * ws-model
+ *
  * LICENSE
  *
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -8,22 +10,76 @@
  * this stuff. If we meet some day, and you think this stuff is worth it,
  * you can buy me a beer in return.
  *
- * @author    Weltraumschaf
- * @copyright Copyright (c) 02.12.2010, Sven Strittmatter.
- * @version   0.2
+ * PHP version 5
+ *
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
  */
 
+/**
+ * Represents a generated code file (usually a class file).
+ * 
+ * @category  WS
+ * @package   Model
+ * @author    Sven Strittmatter <ich@weltraumschaf.de>
+ * @copyright 2010 Sven Strittmatter
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ * @version   0.3
+ * @link      https://github.com/Weltraumschaf/ws-view
+ */
 class WS_Model_File {
+    /**
+     * Default file extension.
+     */
     const DEFAULT_EXTENSION = '.php';
+    /**
+     * This character will be changed in the name to the directory separator.
+     */
     const DIR_DELIMITER     = '_';
-
+    /**
+     * The files name.
+     *
+     * @var string
+     */
     private $name;
+    /**
+     * The files content
+     *
+     * @var string
+     */
     private $content;
+    /**
+     * The files extension.
+     *
+     * @var string
+     */
     private $extension;
+    /**
+     * The names directory delimiter (@see WS_Model_File::DIR_DELIMITER).
+     *
+     * @var string
+     */
     private $delimiter;
+    /**
+     * The base name is the file name replaced the DIR_DELIMITER with the
+     * directory separator and appended file extension.
+     * 
+     * @var string
+     */
     private $baseName;
-    
+
+    /**
+     *
+     * @param string $name
+     * @param string $content
+     * @param string $ext
+     * @param string $del
+     */
     public function  __construct($name, $content, $ext = self::DEFAULT_EXTENSION, $del = self::DIR_DELIMITER) {
         $this->name      = (string) $name;
         $this->content   = (string) $content;
@@ -35,18 +91,43 @@ class WS_Model_File {
         }
     }
 
+    /**
+     * Returns the files name.
+     *
+     * @return string
+     */
     public function getName() {
         return $this->name;
     }
 
+    /**
+     * Returns the file extension.
+     * 
+     * @return string
+     */
     public function getExtension() {
         return $this->extension;
     }
 
+    /**
+     * Returns the file content.
+     *
+     * @return string
+     */
     public function getContent() {
         return $this->content;
     }
 
+    /**
+     * Returns the files base name.
+     *
+     * It consists of the filename with replaced DIR_DELIMITER and appended
+     * extension.
+     *
+     * @todo Implement DIR_DELIMITER
+     *
+     * @return string
+     */
     public function getBaseName() {
         if (null === $this->baseName) {
 //            $baseName = str_replace(self::DIR_DELIMITER, DIRECTORY_SEPARATOR, $this->getName());
@@ -56,6 +137,16 @@ class WS_Model_File {
         return $this->baseName;
     }
 
+    /**
+     * Writes the content to a file named by getBaseName().
+     *
+     * @param string $directory The directory where the file will be stored.
+     *
+     * @throws InvalidArgumentException Write/write errors.
+     * @throws Exception On failing write.
+     * 
+     * @return void
+     */
     public function write($directory) {
         $directory = (string) $directory;
         $fileName  = $directory . DIRECTORY_SEPARATOR . $this->getBaseName();
