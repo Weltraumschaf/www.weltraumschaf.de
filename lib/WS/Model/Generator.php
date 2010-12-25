@@ -272,6 +272,10 @@ class WS_Model_Generator {
      */
     protected function generateBaseClassConstructor(WS_Model_Xml_Entity $entity) {
         $methodTpl = $this->generateMethod('__construct', WS_Model_Template_Abstract::MODIFIER_PUBLIC);
+        $argument  = $this->tplFactory->createArgumentTemplate();
+        $argument->setName('data');
+        $argument->setDefault('null');
+        $methodTpl->addArgument($argument);
         $body      = 'parent::__construct(array(';
 
         if ($entity->countProperties()) {
@@ -291,7 +295,7 @@ class WS_Model_Generator {
             $body .= PHP_EOL . WS_Model_Template_Abstract::getIndentation(2);
         }
 
-        $body .= '));';
+        $body .= '), $data);';
         $methodTpl->setBody($body);
         
         return $methodTpl;

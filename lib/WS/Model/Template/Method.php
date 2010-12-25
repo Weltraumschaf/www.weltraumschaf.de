@@ -94,7 +94,11 @@ class WS_Model_Template_Method extends WS_Model_Template_Abstract {
     }
 
     public function addArgument(WS_Model_Template_Argument $a) {
-        $this->arguments[] = $a;
+        $this->arguments[$a->getName()] = $a;
+    }
+
+    public function hasArgument($name) {
+        return array_key_exists((string) $name, $this->arguments);
     }
 
     public function getArguments() {
@@ -131,12 +135,15 @@ class WS_Model_Template_Method extends WS_Model_Template_Abstract {
         $argString = '';
 
         if (!empty($this->arguments)) {
-            foreach ($this->arguments as $index => $argument) {
+            $index = 0;
+
+            foreach ($this->arguments as $argument) {
                 if ($index > 0) {
                     $argString .= ', ';
                 }
 
                 $argString .= $argument->render();
+                $index++;
             }
         }
 
