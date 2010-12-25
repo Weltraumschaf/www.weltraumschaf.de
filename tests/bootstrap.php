@@ -21,11 +21,19 @@ require_once dirname(__DIR__) . '/htdocs/inc/bootstrap.php';
  */
 define('WS_TESTS_FIXURES_DIRECTORY', WS_ROOT_DIRECTORY . '/tests/fixtures');
 
-/*
-PHPUnit_Util_Filter::addDirectoryToFilter(PEAR_INSTALL_DIR);
-PHPUnit_Util_Filter::addDirectoryToFilter(PHP_LIBDIR);
-PHPUnit_Util_Filter::addFileToFilter(__FILE__, 'PHPUNIT');
-*/
+PHP_CodeCoverage_Filter::getInstance()->addDirectoryToBlacklist(
+    PEAR_INSTALL_DIR, '.php'
+);
+PHP_CodeCoverage_Filter::getInstance()->addDirectoryToBlacklist(
+    PHP_LIBDIR, '.php'
+);
+PHP_CodeCoverage_Filter::getInstance()->addDirectoryToBlacklist(
+    WS_ROOT_DIRECTORY . '/lib/WS', '.php'
+);
+PHP_CodeCoverage_Filter::getInstance()->addFileToBlacklist(
+    __FILE__
+);
+
 /*
  * Set error reporting to the level to which Console Library code must comply.
  */
@@ -37,7 +45,6 @@ error_reporting( E_ALL | E_STRICT );
  * framework code and tests that would supersede this copy.
  */
 set_include_path(implode(PATH_SEPARATOR, array(
-    WS_ROOT_DIRECTORY . '/lib',
     WS_ROOT_DIRECTORY . '/tests',
     get_include_path()
 )));

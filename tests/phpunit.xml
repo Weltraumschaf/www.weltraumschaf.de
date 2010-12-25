@@ -10,7 +10,6 @@
 
    @author    Weltraumschaf
    @copyright Copyright (c) 01.12.2010, Sven Strittmatter.
-   @version   0.2
    @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  -->
 <phpunit backupGlobals="false"
@@ -22,5 +21,7 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="true"
-         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
+         verbose="false"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
+         bootstrap="bootstrap.php">
 </phpunit>

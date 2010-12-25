@@ -24,7 +24,7 @@ class CiteShufflerTest extends PHPUnit_Framework_TestCase {
         ));
         $shuffler = new CiteShuffler($collection);
 
-        $this->assertType('Cite', $shuffler->getCite());
+        $this->assertInstanceOf('Cite', $shuffler->getCite());
 
         $same     = 0;
         $lastCite = null;

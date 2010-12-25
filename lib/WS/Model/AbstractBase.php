@@ -26,13 +26,25 @@
  */
 require_once 'WS/Model/IToArray.php';
 /**
+ * @see WS_Model_IFromArray
+ */
+require_once 'WS/Model/IFromArray.php';
+/**
  * @see WS_Model_IToJson
  */
 require_once 'WS/Model/IToJson.php';
 /**
+ * @see WS_Model_IFromJson
+ */
+require_once 'WS/Model/IFromJson.php';
+/**
  * @see WS_Model_IToStdClass
  */
 require_once 'WS/Model/IToStdClass.php';
+/**
+ * @see WS_Model_IFromStdClass
+ */
+require_once 'WS/Model/IFromStdClass.php';
 
 /**
  * @category  WS
@@ -43,7 +55,8 @@ require_once 'WS/Model/IToStdClass.php';
  * @version   0.3
  * @link      https://github.com/Weltraumschaf/ws-view
  */
-abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJson, WS_Model_IToStdClass {
+abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJson, WS_Model_IToStdClass,
+                                                WS_Model_IFromArray, WS_Model_IFromJson, WS_Model_IFromStdClass {
     private $propertyNames;
 
     public static function generateSetterName($propertyName) {
@@ -54,8 +67,24 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
         return 'get' . ucfirst($propertyName);
     }
 
-    public function  __construct(array $propertyNames) {
+    public function  __construct(array $propertyNames, $data = null) {
         $this->propertyNames = $propertyNames;
+
+        if (null !== $data) {
+            if (is_array($data)) {
+                $this->fromArray($data);
+            } else if ($data instanceof  stdClass) {
+                $this->fromStdClass($data);
+            } else {
+                if (is_object($data)) {
+                    $type = get_class($data);
+                } else {
+                    $type = gettype($data);
+                }
+
+                throw new InvalidArgumentException("Can not handle passed argeument of type {$type}!");
+            }
+        }
     }
 
     public function  __call($name, $arguments) {
@@ -77,8 +106,14 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
     protected function getPropertyNames() {
         return $this->propertyNames;
     }
-    
-    protected function convertToArray(array $propertyNames) {
+
+    /**
+     *
+     * @return array
+     */
+    public function toArray() {
+        $propertyNames = $this->getPropertyNames();
+
         $arr = array();
 
         if (!empty($propertyNames)) {
@@ -88,7 +123,7 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
                 if (!method_exists($this, $getterName)) {
                     throw new InvalidArgumentException("Object does not have a property named '$propertyName'!");
                 }
-                
+
                 $arr[$propertyName] = $this->{$getterName}();
             }
         }
@@ -96,12 +131,46 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
         return $arr;
     }
 
-    protected function convertToJson(array $asAssocArray) {
-        return json_encode($asAssocArray);
+    public function fromArray(array $properties) {
+        if (empty($properties)) {
+            return;
+        }
+
+        foreach ($properties as $name => $value) {
+            $setterName = self::generateSetterName($name);
+
+            try {
+                $this->{$setterName}($value);
+            } catch (BadMethodCallException $e) {
+                throw new InvalidArgumentException("Can not set property '$name'!");
+            }
+        }
     }
 
-    protected function convertToStdClass(array $asAssocArray) {
+    /**
+     * @return string
+     */
+    public function toJson() {
+        return json_encode($this->toArray());
+    }
+
+    public function fromJson($string) {
+        $string = (string) $string;
+
+        if (empty($string)) {
+            return;
+        }
+
+        $object = json_decode($string);
+        $this->fromStdClass($object);
+    }
+
+    /**
+     * @return stdClass
+     */
+    public function toStdClass() {
         $std = new stdClass();
+        $asAssocArray = $this->toArray();
 
         if (!empty($asAssocArray)) {
             foreach ($asAssocArray as $name => $value) {
@@ -112,45 +181,8 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
         return $std;
     }
 
-    /**
-     * Will be implemented by the generated class.
-     *
-     * Example:
-     * <code>
-     * public function toArray() {
-     *   return $this->convertToArray(array('nameOne', 'nameTwo', 'nameThre'));
-     * }
-     * </code>
-     *
-     * @return array
-     */
-//    public function toArray();
-
-    /**
-     * Will be implemented by the generated class.
-     *
-     * Example:
-     * <code>
-     * public function toJson() {
-     *   return $this->convertToJson(array('nameOne', 'nameTwo', 'nameThre'));
-     * }
-     * </code>
-     *
-     * @return string
-     */
-//    public function toJson();
-
-    /**
-     * Will be implemented by the generated class.
-     *
-     * Example:
-     * <code>
-     * public function toJson() {
-     *   return $this->convertToStdClass(array('nameOne', 'nameTwo', 'nameThre'));
-     * }
-     * </code>
-     *
-     * @return stdClass
-     */
-//    public function toStdClass();
+    public function fromStdClass(stdClass $object) {
+        $properties = get_object_vars($object);
+        $this->fromArray($properties);
+    }
 }

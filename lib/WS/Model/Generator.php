@@ -118,7 +118,7 @@ class WS_Model_Generator {
 
             foreach ($entites as $entity) {
                 /* @var $entity WS_Model_Xml_Entity */
-                $className = $entity->getName() . self::BASE_CLASS_PREFIX;
+                $className = $entity->getName() . self::BASE_CLASS_SUFFIX;
                 $classTpl  = $this->tplFactory->createClassTemplate();
                 $classTpl->setName($className);
                 $classTpl->setBaseClass('WS_Model_AbstractBase');
@@ -148,7 +148,7 @@ class WS_Model_Generator {
                 $className = $entity->getName();
                 $classTpl  = $this->tplFactory->createClassTemplate();
                 $classTpl->setName($entity->getName());
-                $classTpl->setBaseClass($entity->getName() . self::BASE_CLASS_PREFIX);
+                $classTpl->setBaseClass($entity->getName() . self::BASE_CLASS_SUFFIX);
                 $classTpls[] = $classTpl;
             }
         }

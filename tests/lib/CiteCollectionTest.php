@@ -69,7 +69,7 @@ class CiteCollectionTest extends PHPUnit_Framework_TestCase {
     public function testLoadFromXml() {
         $xml = new SimpleXMLElement(file_get_contents(WS_TESTS_FIXURES_DIRECTORY . '/cites.xml'));
         $collection = CiteCollection::loadFromXml($xml);
-        $this->assertType('CiteCollection', $collection);
+        $this->assertInstanceOf('CiteCollection', $collection);
         $this->assertEquals(6, $collection->count());
 
 
@@ -112,7 +112,7 @@ class CiteCollectionTest extends PHPUnit_Framework_TestCase {
         $collection1 = CiteCollection::loadFromXml($xml);
         $this->assertEquals(6, $collection1->count());
         $collection2 = CiteCollection::loadFromJson($collection1->toJson());
-        $this->assertType('CiteCollection', $collection2);
+        $this->assertInstanceOf('CiteCollection', $collection2);
         $this->assertEquals(6, $collection2->count());
 
         $this->assertEquals('Thomas Carlyle', $collection2[3]->getAuthor());
