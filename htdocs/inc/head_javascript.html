@@ -1,2 +1,20 @@
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.amail.js"></script>
+<script type="text/javascript" src="js/LAB.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function(){
+        $LAB.script('js/jquery.js').wait(function() {
+            $(function() {
+                $('#music').hide();
+            });
+        }).script('js/jquery.amail.js')
+          .script('js/jquery.facebox.js').wait(function() {
+            $.facebox.settings.loadingImage = 'img/Loading.gif';
+            $.facebox.settings.closeImage   = 'img/Closelabel.png';
+            $(function() {
+                $('#contact').amail('(at)','(dot)');
+                $('a[rel*=musicLink]').facebox();
+            });
+        });
+    }());
+/* ]]> */
+</script>

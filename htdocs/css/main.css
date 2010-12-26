@@ -19,13 +19,13 @@ body {
     background-color: #E4E4E4;
 }
 
-ul { /* remove bullets and list indents */
+#profiles ul { /* remove bullets and list indents */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-li {
+#profiles li {
     display: inline;
 }
 
