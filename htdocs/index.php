@@ -74,12 +74,12 @@
         </ul>
 
         <div id="links">
-            <a href="./work.php" title="Arbeiten vom Weltraumschaf">
+            <a href="work.php" title="Arbeiten vom Weltraumschaf">
                 Arbeiten</a> &ndash;
-                <a href="./cite.php" title="Ein Zitat das Weltraumschaf gut findet">
+                <a href="cite.php" rel="facebox" title="Ein Zitat das Weltraumschaf gut findet">
                 Zitat</a> &ndash;
-            <a href="#music" rel="musicLink" title="Musik vom Weltraumschaf">Musik</a> &ndash;
-            <a href="./impressum.php" title="Lizenz und so&hellip;">Impressum</a> &ndash;
+            <a href="#music" rel="facebox" title="Musik vom Weltraumschaf">Musik</a> &ndash;
+            <a href="impressum.php" title="Lizenz und so&hellip;">Impressum</a> &ndash;
             <a id="contact" title="E-Mail an mich">
                 ich(at)weltraumschaf(dot)de</a> &ndash;
             <a href="http://www.cacert.org/index.php?id=3" title="Braucht man f&uuml;r https://www.weltraumschaf.de">

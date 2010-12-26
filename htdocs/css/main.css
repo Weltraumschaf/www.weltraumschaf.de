@@ -51,11 +51,19 @@ a:hover {
 }
 
 #links, #profiles {
-    padding-top: 3%;
+    padding-top: 25px;
 }
 
-#impressum, #work, #cite {
+#impressum, #work {
     padding-top: 10%;
+}
+
+#cite {
+    text-align: center;
+}
+
+#facebox div.content {
+    padding: 30px;
 }
 
 #impressum, #work {
