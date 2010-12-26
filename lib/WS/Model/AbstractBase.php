@@ -69,7 +69,8 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
 
     public function  __construct(array $propertyNames, $data = null) {
         $this->propertyNames = $propertyNames;
-
+        $data = $this->init($data);
+        
         if (null !== $data) {
             if (is_array($data)) {
                 $this->fromArray($data);
@@ -105,6 +106,17 @@ abstract class WS_Model_AbstractBase implements WS_Model_IToArray, WS_Model_IToJ
 
     protected function getPropertyNames() {
         return $this->propertyNames;
+    }
+
+    /**
+     * Template method called in the constructor to process the passed date before
+     * it will be set to the object.
+     *
+     * @param mixed $data The data to initialize the object.
+     * @return mixed
+     */
+    protected function init($data = null) {
+        return $data;
     }
 
     /**
