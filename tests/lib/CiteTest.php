@@ -58,11 +58,11 @@ class CiteTest extends PHPUnit_Framework_TestCase {
 
     public function testToJson() {
         $cite = new Cite();
-        $this->assertEquals('{"author": "", "title": "", "text": ""}', $cite->toJson());
+        $this->assertEquals('{"author":"","title":"","text":""}', $cite->toJson());
         $cite->setAuthor('foo');
         $cite->setTitle('bar');
         $cite->setText('baz');
-        $this->assertEquals('{"author": "foo", "title": "bar", "text": "baz"}', $cite->toJson());
+        $this->assertEquals('{"author":"foo","title":"bar","text":"baz"}', $cite->toJson());
     }
 
     public function testHasTitle() {
@@ -80,15 +80,43 @@ class CiteTest extends PHPUnit_Framework_TestCase {
             $cite->foo();
             $this->fail('Call to unknown method should throw an exception!');
         } catch (BadMethodCallException $e) {
-            $this->assertEquals('Can not handle method call to \'foo\'!', $e->getMessage());
+            $this->assertEquals("Does not recognize method with name 'foo'!", $e->getMessage());
         }
 
         try {
             $cite = new Cite(array('foo' => 'bar'));
-            $cite->foo();
             $this->fail('Construct with unknown property should throw an exception!');
         } catch (InvalidArgumentException $e) {
             $this->assertEquals('Can not set property \'foo\'!', $e->getMessage());
         }
+    }
+
+    public function testSanitize() {
+        $cite = new Cite();
+        $this->assertEquals('A string with linebreaks.',
+                            $cite->sanitize("  A \tstring with\nlinebreaks.   "));
+    }
+
+    public function testInitWithConstructorData() {
+        $cite = new Cite();
+        $this->assertEquals('', $cite->getAuthor());
+        $this->assertEquals('', $cite->getText());
+        $this->assertEquals('', $cite->getTitle());
+
+        $cite = new Cite(array(
+            'author' => '  Foo  Bar  ',
+            'text'   => "  A \tstring with\nlinebreaks.   ",
+            'title'  => 'A Title'));
+        $this->assertEquals('Foo Bar', $cite->getAuthor());
+        $this->assertEquals('A string with linebreaks.', $cite->getText());
+        $this->assertEquals('A Title', $cite->getTitle());
+
+        $data = new stdClass();
+        $data->author = '  Foo  Bar  ';
+        $data->text   = "  A \tstring with\nlinebreaks.   ";
+        $cite = new Cite($data);
+        $this->assertEquals('Foo Bar', $cite->getAuthor());
+        $this->assertEquals('A string with linebreaks.', $cite->getText());
+        $this->assertEquals('', $cite->getTitle());
     }
 }

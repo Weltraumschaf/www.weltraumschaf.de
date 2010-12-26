@@ -8,14 +8,14 @@ abstract class BookBase extends WS_Model_AbstractBase {
     private $affiliateUrl;
     private $description;
 
-    public function __construct() {
+    public function __construct($data = null) {
         parent::__construct(array(
             'author',
             'title',
             'coverPicture',
             'affiliateUrl',
             'description'
-        ));
+        ), $data);
     }
 
     public function setAuthor($value) {

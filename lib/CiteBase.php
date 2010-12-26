@@ -6,12 +6,12 @@ abstract class CiteBase extends WS_Model_AbstractBase {
     private $title;
     private $text;
 
-    public function __construct() {
+    public function __construct($data = null) {
         parent::__construct(array(
             'author',
             'title',
             'text'
-        ));
+        ), $data);
     }
 
     public function setAuthor($value) {
