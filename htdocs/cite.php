@@ -23,8 +23,9 @@ $cite         = $shuffler->getCite();
    @version   0.2
    @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  -->
+<h2>Ein Zitat das Weltraumschaf gut findet</h2>
+
 <div id="cite">
-    <h2>Ein Zitat das Weltraumschaf gut findet</h2>
     <p><?php echo htmlify($cite->getText()); ?></p>
     <p>
         <em>

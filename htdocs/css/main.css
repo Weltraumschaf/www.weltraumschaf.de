@@ -19,7 +19,7 @@ body {
     background-color: #E4E4E4;
 }
 
-#profiles ul { /* remove bullets and list indents */
+#profiles ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -27,6 +27,10 @@ body {
 
 #profiles li {
     display: inline;
+}
+
+h2 {
+    text-align: center;
 }
 
 p {
@@ -52,10 +56,6 @@ a:hover {
 
 #links, #profiles {
     padding-top: 25px;
-}
-
-#impressum, #work {
-    padding-top: 10%;
 }
 
 #cite {

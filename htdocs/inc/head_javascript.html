@@ -2,19 +2,16 @@
 <script type="text/javascript">
 /* <![CDATA[ */
     (function(){
-        $LAB.script('js/jquery.js').wait(function() {
-            $(function() {
-                $('#music').hide();
+        $LAB.script('js/jquery.js').wait()
+            .script('js/jquery.amail.js')
+            .script('js/jquery.facebox.js').wait(function() {
+                $.facebox.settings.loadingImage = 'img/Loading.gif';
+                $.facebox.settings.closeImage   = 'img/Closelabel.png';
+                $(function() {
+                    $('.contact').amail('(at)','(dot)');
+                    $('a[rel*=facebox]').facebox();
+                });
             });
-        }).script('js/jquery.amail.js')
-          .script('js/jquery.facebox.js').wait(function() {
-            $.facebox.settings.loadingImage = 'img/Loading.gif';
-            $.facebox.settings.closeImage   = 'img/Closelabel.png';
-            $(function() {
-                $('#contact').amail('(at)','(dot)');
-                $('a[rel*=facebox]').facebox();
-            });
-        });
     }());
 /* ]]> */
 </script>
