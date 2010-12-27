@@ -12,4 +12,4 @@
 /**
  * Base exception class
  */
-class Dropbox_Exception extends Exception { }
+class Dropbox_Exception extends Exception {}

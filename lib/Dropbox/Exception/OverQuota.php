@@ -9,12 +9,12 @@
  * @license http://code.google.com/p/dropbox-php/wiki/License MIT
  */
 
+require_once 'Dropbox/Exception.php';
+
 /**
- * This exception is thrown when the operation required more space than the available quota.
+ * This exception is thrown when the operation required more space
+ * than the available quota.
  * 
  * Basically, this exception is used when we get back a 507.
  */
-class Dropbox_Exception_OverQuota extends Dropbox_Exception {
-
-
-}
+class Dropbox_Exception_OverQuota extends Dropbox_Exception {}

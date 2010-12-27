@@ -9,10 +9,9 @@
  * @license http://code.google.com/p/dropbox-php/wiki/License MIT
  */
 
+require_once 'Dropbox/Exception.php';
+
 /**
  * This exception is thrown when an error occured during the request_token process.
  */
-class Dropbox_Exception_RequestToken extends Dropbox_Exception {
-
-
-}
+class Dropbox_Exception_RequestToken extends Dropbox_Exception {}

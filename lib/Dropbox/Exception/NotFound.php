@@ -9,12 +9,11 @@
  * @license http://code.google.com/p/dropbox-php/wiki/License MIT
  */
 
+require_once 'Dropbox/Exception.php';
+
 /**
  * This exception is thrown when a non-existant uri is accessed.
  * 
  * Basically, this exception is used when we get back a 404.
  */
-class Dropbox_Exception_NotFound extends Dropbox_Exception {
-
-
-}
+class Dropbox_Exception_NotFound extends Dropbox_Exception {}

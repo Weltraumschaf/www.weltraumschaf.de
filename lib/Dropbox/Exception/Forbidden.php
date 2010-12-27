@@ -9,10 +9,9 @@
  * @license http://code.google.com/p/dropbox-php/wiki/License MIT
  */
 
+require_once 'Dropbox/Exception.php';
+
 /**
  * This exception is thrown when we receive the 403 forbidden response
  */
-class Dropbox_Exception_Forbidden extends Dropbox_Exception {
-
-
-}
+class Dropbox_Exception_Forbidden extends Dropbox_Exception {}

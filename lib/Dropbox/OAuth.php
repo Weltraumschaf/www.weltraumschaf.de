@@ -50,17 +50,9 @@ abstract class Dropbox_OAuth {
     /**
      * An OAuth request token. 
      * 
-     * @var string 
+     * @var Dropbox_OAuth_Token
      */
-    protected $oauth_token = null;
-
-    /**
-     * OAuth token secret 
-     * 
-     * @var string 
-     */
-    protected $oauth_token_secret = null;
-
+    protected $oauthToken;
 
     /**
      * Constructor
@@ -76,20 +68,11 @@ abstract class Dropbox_OAuth {
      * The tokens can also be passed as an array into the first argument.
      * The array must have the elements token and token_secret.
      * 
-     * @param string|array $token 
-     * @param string $token_secret 
+     * @param Dropbox_OAuth_Token $token
      * @return void
      */
-    public function setToken($token, $token_secret = null) {
-
-        if (is_array($token)) {
-            $this->oauth_token = $token['token'];
-            $this->oauth_token_secret = $token['token_secret'];
-        } else {
-            $this->oauth_token = $token;
-            $this->oauth_token_secret = $token_secret;
-        }
-
+    public function setToken(Dropbox_OAuth_Token $token) {
+        $this->oauthToken = $token;
     }
 
     /**
@@ -97,15 +80,10 @@ abstract class Dropbox_OAuth {
      *
      * The array will contain the elements 'token' and 'token_secret'.
      * 
-     * @return array 
+     * @return Dropbox_OAuth_Token
      */
     public function getToken() {
-
-        return array(
-            'token' => $this->oauth_token,
-            'token_secret' => $this->oauth_token_secret,
-        );
-
+        return $this->oauthToken;
     }
 
     /**
@@ -115,11 +93,14 @@ abstract class Dropbox_OAuth {
      * @return string 
      */
     public function getAuthorizeUrl($callBack = null) {
-        
         // Building the redirect uri
         $token = $this->getToken();
-        $uri = self::URI_AUTHORIZE . '?oauth_token=' . $token['token'];
-        if ($callBack) $uri.='&oauth_callback=' . $callBack;
+        $uri   = self::URI_AUTHORIZE . '?oauth_token=' . $token->getToken();
+        
+        if ($callBack) {
+            $uri .= '&oauth_callback=' . $callBack;
+        }
+
         return $uri;
     }
 
@@ -147,5 +128,4 @@ abstract class Dropbox_OAuth {
      * @return array
      */
     abstract public function getAccessToken(); 
-
 }
