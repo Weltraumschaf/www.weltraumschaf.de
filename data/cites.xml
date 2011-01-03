@@ -38,8 +38,13 @@
         <text>Lieben und arbeiten.</text>
     </cite>
     <cite>
-    	<author>Alan Perlis</author>
-		<text>A programming language is low level when its programs require
-		attention to the irrelevant.</text>
+        <author>Alan Perlis</author>
+        <text>A programming language is low level when its programs require
+        attention to the irrelevant.</text>
+    </cite>
+    <cite>
+        <author>Rosenstolz</author>
+        <text>Lieber durch die Wand als immer durch die Tür. Durchbreche den
+        Verstand dann findest du zu dir.</text>
     </cite>
 </cites>
