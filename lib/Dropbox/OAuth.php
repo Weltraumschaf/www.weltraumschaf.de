@@ -113,7 +113,7 @@ abstract class Dropbox_OAuth {
      * @param array $httpHeaders 
      * @return string 
      */
-    public abstract function fetch($uri, $arguments = array(), $method = 'GET', $httpHeaders = array()); 
+    abstract public function fetch($uri, array $arguments = array(), $method = 'GET', array $httpHeaders = array());
 
     /**
      * Requests the OAuth request token.

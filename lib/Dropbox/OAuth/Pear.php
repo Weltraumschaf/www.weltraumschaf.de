@@ -14,6 +14,7 @@ require_once 'Dropbox/Exception/NotFound.php';
 require_once 'Dropbox/Exception/OverQuota.php';
 require_once 'Dropbox/Exception/RequestToken.php';
 require_once 'Dropbox/Response.php';
+require_once 'Dropbox/OAuth.php';
 require_once 'Dropbox/OAuth/Token.php';
 
 /**
@@ -21,14 +22,14 @@ require_once 'Dropbox/OAuth/Token.php';
  * 
  * This classes use the PEAR HTTP_OAuth package. Make sure this is installed.
  */
-class Dropbox_OAuth_PEAR extends Dropbox_OAuth {
+class Dropbox_OAuth_Pear extends Dropbox_OAuth {
 
     /**
      * OAuth object
      *
      * @var HTTP_OAuth_Consumer
      */
-    protected $oAuth;
+    protected $OAuth;
 
     /**
      * OAuth consumer key
@@ -55,7 +56,7 @@ class Dropbox_OAuth_PEAR extends Dropbox_OAuth {
             throw new Dropbox_Exception('The HTTP_OAuth_Consumer class could not be found! Did you install the pear HTTP_OAUTH class?');
         }
 
-        $this->oAuth       = new HTTP_OAuth_Consumer($consumerKey, $consumerSecret);
+        $this->OAuth       = new HTTP_OAuth_Consumer($consumerKey, $consumerSecret);
         $this->consumerKey = $consumerKey;
     }
 
@@ -71,8 +72,8 @@ class Dropbox_OAuth_PEAR extends Dropbox_OAuth {
      */
     public function setToken(Dropbox_OAuth_Token $token) {
         parent::setToken($token);
-        $this->oAuth->setToken($this->oauthToken->getToken());
-        $this->oAuth->setTokenSecret($this->oauthToken->getSecret());
+        $this->OAuth->setToken($this->oauthToken->getToken());
+        $this->OAuth->setTokenSecret($this->oauthToken->getSecret());
 
     }
 
@@ -94,7 +95,7 @@ class Dropbox_OAuth_PEAR extends Dropbox_OAuth {
         $parameters = array(
             'oauth_consumer_key'     => $this->consumerKey,
             'oauth_signature_method' => 'HMAC-SHA1',
-            'oauth_token'            => $this->oauth_token,
+            'oauth_token'            => $this->oauthToken->getToken(),
         );
 
         if (is_array($arguments)) {

@@ -14,20 +14,21 @@ require_once 'Dropbox/Exception/NotFound.php';
 require_once 'Dropbox/Exception/OverQuota.php';
 require_once 'Dropbox/Exception/RequestToken.php';
 require_once 'Dropbox/Response.php';
+require_once 'Dropbox/OAuth.php';
 require_once 'Dropbox/OAuth/Token.php';
 /**
  * This class is used to sign all requests to dropbox.
  *
  * This specific class uses the PHP OAuth extension
  */
-class Dropbox_OAuth_Pphp extends Dropbox_OAuth {
+class Dropbox_OAuth_Php extends Dropbox_OAuth {
 
     /**
      * OAuth object
      *
      * @var OAuth
      */
-    protected $oAuth;
+    protected $OAuth;
 
     /**
      * Constructor

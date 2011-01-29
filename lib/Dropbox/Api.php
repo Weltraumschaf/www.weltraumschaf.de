@@ -8,7 +8,7 @@
  * @author Evert Pot (http://www.rooftopsolutions.nl/) 
  * @license http://code.google.com/p/dropbox-php/wiki/License MIT
  */
-class Dropbox_API {
+class Dropbox_Api {
 
     /**
      * Sandbox root-path
