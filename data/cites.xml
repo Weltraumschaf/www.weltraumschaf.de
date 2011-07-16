@@ -75,4 +75,9 @@
         <text>Good judgment comes from experience, experience from bad judgment.</text>
         <source>http://www.lessonsoffailure.com/developers/pervasive-myths-older-software-developers/</source>
     </cite>
+    <cite>
+        <author>Uncle Bob Martin</author>
+        <text>The length of a variable name should be proportional to its scope.  The length of a function or class name is the inverse.</text>
+        <source>http://twitter.com/unclebobmartin/status/39333982050975744</source>
+    </cite>
 </cites>
