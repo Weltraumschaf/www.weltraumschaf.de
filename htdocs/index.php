@@ -86,11 +86,6 @@
                 Root-Zertifikate von CAcert</a>
         </div>
 
-        <p><a href="http://www.onlineeducation.net/bottled_water/">
-            <img src="http://www.onlineeducation.net/bottled_water/water_full.jpg"
-                 alt="The Facts About Bottled Water - Presented by Online Education"
-                 width="1110" height="4140" /></a></p>
-
         <?php include 'inc/body_javascript.html'; ?>        
     </body>
 </html>
