@@ -14,6 +14,8 @@
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
+error_reporting( E_ALL | E_STRICT );
+
 /**
  * The root directory of the repo.
  */
