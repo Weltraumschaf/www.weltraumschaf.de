@@ -4,7 +4,6 @@
 <?php if (defined("WS_STAGE") && WS_STAGE === "prod"): ?>
 <link href="css/live.css" rel="stylesheet" type="text/css" media="screen"/>
 <?php else: ?>
-<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="css/main.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="css/jquery.facebox.css" rel="stylesheet" type="text/css" media="screen"/>
 <?php endif; ?>

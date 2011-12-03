@@ -84,6 +84,6 @@
                 Root-Zertifikate von CAcert</a>
         </div>
 
-        <?php include 'inc/body_javascript.html'; ?>
+        <?php include 'inc/body_javascript.php'; ?>
     </body>
 </html>

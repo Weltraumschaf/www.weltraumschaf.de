@@ -21,7 +21,12 @@ error_reporting( E_ALL | E_STRICT );
  */
 define('WS_ROOT_DIRECTORY', dirname(dirname(__DIR__)));
 define('WS_DATA_DIRECTORY', WS_ROOT_DIRECTORY . '/data');
-define('WS_STAGE', '');
+
+if ($_SERVER['HTTP_HOST'] === "www.weltraumschaf.de") {
+    define('WS_STAGE', 'prod');
+} else {
+    define('WS_STAGE', 'dev');
+}
 
 /*
  * Prepend the lib/ and tests/ directories to the nclude_path. This allows the
