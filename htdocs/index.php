@@ -14,7 +14,7 @@
    @version   0.2
    @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  -->
-<html lang="de" xmlns="http://www.w3.org/1999/xhtml" xmlns:sc="http://www.kwick.de/2010/ML">
+<html lang="de">
     <head>
 	<?php echo girly(WS_DATA_DIRECTORY . '/girly'); ?>
         <title>Hier wohnt das Weltraumschaf</title>
@@ -24,52 +24,60 @@
     </head>
     <body>
         <h1>Hier wohnt das Weltraumschaf</h1>
+<!--        <div id="text-shadow-box">
+            <div class="wall">
+                <div id="tsb-box"></div>
+                <p id="tsb-text">Weltraumschaf</p>
+                <div></div>
+            </div>
 
-	<sc:fan userid="5019692" show-personal-data="0" show-profile-picture="0"
-                show-gender-and-age="0"></sc:fan>
+            <div id="tsb-spot"></div>
+        </div>-->
 
-        <ul id="profiles">
-            <li>
-                <a href="http://blog.weltraumschaf.de/" title="Mein Blog">
-                    <img src="img/Rss.png" alt="Blog" />
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/Weltraumschaf/" title="Mein Twitter">
-                    <img src="img/Twitter.png" alt="Twitter" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.xing.com/profile/Sven_Strittmatter" title="Mein Xing-Profil">
-                    <img src="img/Xing.png" alt="Xing" />
-                </a>
-            </li>
-            <li>
-                <a href="http://de.linkedin.com/pub/sven-strittmatter/21/751/537" title="Mein Linked in-Profil">
-                    <img src="img/Linkedin.png" alt="Linked in" />
-                </a>
-            </li>
-            <li>
-                <a href="http://www.kwick.de/Weltraumschaf" title="Mein KWICK!-Profil">
-                    <img src="img/Kwick.png" alt="KWICK!" />
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
-                    <img src="img/Github.png" alt="GitHub" />
-                </a>
-            </li>
-            <li>
-                <a href="http://www.weltraumschaf.de:8080/" title="Mein Hudson CI Server">
-                    <img src="img/Hudson.png" alt="Hudson CI" />
-                </a>
-            </li>
-            <li>
-                <a href="http://pear.weltraumschaf.de/" title="Mein PEAR Channel">
-                    <img src="img/Pear.png" alt="PEAR" />
-                </a>
-            </li>
-        </ul>
+        <div id="profiles">
+            <ul>
+                <li>
+                    <a href="http://blog.weltraumschaf.de/" title="Mein Blog">
+                        <img src="img/Rss.png" alt="Blog" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Weltraumschaf/" title="Mein Twitter">
+                        <img src="img/Twitter.png" alt="Twitter" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.xing.com/profile/Sven_Strittmatter" title="Mein Xing-Profil">
+                        <img src="img/Xing.png" alt="Xing" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://de.linkedin.com/pub/sven-strittmatter/21/751/537" title="Mein Linked in-Profil">
+                        <img src="img/Linkedin.png" alt="Linked in" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.kwick.de/Weltraumschaf" title="Mein KWICK!-Profil">
+                        <img src="img/Kwick.png" alt="KWICK!" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
+                        <img src="img/Github.png" alt="GitHub" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.weltraumschaf.de:8080/" title="Mein Hudson CI Server">
+                        <img src="img/Hudson.png" alt="Hudson CI" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://pear.weltraumschaf.de/" title="Mein PEAR Channel">
+                        <img src="img/Pear.png" alt="PEAR" />
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <div id="links">
             <a href="work.html" rel="facebox" title="Arbeiten vom Weltraumschaf">

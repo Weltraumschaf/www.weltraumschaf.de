@@ -1,0 +1,149 @@
+/**
+ * LICENSE
+ *
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * "Sven Strittmatter" <ich@weltraumschaf.de> wrote this file.
+ * As long as you retain this notice you can do whatever you want with
+ * this stuff. If we meet some day, and you think this stuff is worth it,
+ * you can buy me a beer in return.
+ *
+ * @author    Weltraumschaf
+ * @copyright Copyright (c) 01.12.2010, Sven Strittmatter.
+ * @version   0.2
+ * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
+ */
+
+$colorBackGround: #E4E4E4;
+$colorLinkActive: #5A5A5A;
+$colorLinkHover: #8D8D8D;
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:      'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    text-align:       center;
+    background-color: $colorBackGround;
+    margin:           0;
+    padding:          0;
+}
+
+h1 {
+    margin: 200px 0 0 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    min-width:  500px;
+    margin: 1em auto;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    color: #000;
+}
+
+a:visited, a:active {
+    color: $colorLinkActive;
+}
+
+a:hover {
+    color: $colorLinkHover;
+}
+
+#profiles ul {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+}
+
+#profiles li {
+    display: inline;
+}
+
+#profiles a {
+    text-decoration: none;
+}
+
+#links, #profiles {
+    background-color: #E4E4E4;
+    padding-top: 25px;
+}
+
+#cite {
+    text-align: center;
+}
+
+#facebox div.content {
+    padding: 30px;
+}
+
+#impressum, #work {
+    text-align: left;
+}
+
+#text-shadow-box {
+    position:   relative;
+    width:      798px;
+    height:     406px;
+    background: #E4E4E4;
+    overflow:   hidden;
+    cursor:     none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+}
+
+#text-shadow-box div.wall {
+    position: absolute;
+    top:      175px;
+    left:     0;
+    width:    100%;
+}
+
+#tsb-text {
+    position: absolute;
+    top:            0;
+    left:           0;
+    right:          0;
+    margin:         0;
+    color:          #FFF;
+    font-family:    Helvetica, Arial, sans-serif;
+    font-size:      80px;
+    line-height:    0.5em;
+    height:         1px;
+    font-weight:    bold;
+    text-align:     center;
+}
+
+div.wall div {
+    position:   absolute;
+    background: #E4E4E4;
+    top:        42px;
+    left:       0;
+    height:     300px;
+    width:      100%;
+}
+
+#tsb-box {
+    left: -100px;
+    width: 800px;
+}
+
+#tsb-spot {
+    position:   absolute;
+    top:        0;
+    left:       0;
+    width:      200%;
+    height:     200%;
+    background: url(spotlight.png) center center;
+    background: -moz-radial-gradient(center 45deg, circle closest-side, transparent 0%, black 60%);
+    background: -webkit-gradient(radial, center center, 0, center center, 250, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+}

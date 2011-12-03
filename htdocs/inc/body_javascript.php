@@ -6,4 +6,3 @@
 <script type="text/javascript" src="js/jquery.facebox.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <?php endif; ?>
-<script type="text/javascript" src="http://www.kwick.de/widget/all.js"></script>
