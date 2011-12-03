@@ -30,6 +30,6 @@ require_once 'inc/bootstrap.php';
         <h1>Ein Bild vom Weltraumschaf</h1>
         <div id="photo"></div>
         <?php include 'inc/backlink.html'; ?>
-        <?php include 'inc/body_javascript.html'; ?>
+        <?php include 'inc/body_javascript.php'; ?>
     </body>
 </html>

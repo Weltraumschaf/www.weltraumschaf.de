@@ -20,16 +20,14 @@
         <title>Hier wohnt das Weltraumschaf</title>
         <meta name="description" content="Private Website von Sven Strittmatter" />
         <meta name="keywords" content="Sven, Strittmatter, Weltraumschaf, privat, Profile, Xing, GitHub, Linked in, KWICK!, PEAR, Hudson CI" />
-        <?php include 'inc/head_include.html'; ?>
-        <?php include 'inc/head_javascript.html'; ?>
-        <script type="text/javascript" src="http://www.kwick.de/widget/all.js"></script>
+        <?php include 'inc/head_include.php'; ?>
     </head>
     <body>
         <h1>Hier wohnt das Weltraumschaf</h1>
 
 	<sc:fan userid="5019692" show-personal-data="0" show-profile-picture="0"
                 show-gender-and-age="0"></sc:fan>
-        
+
         <ul id="profiles">
             <li>
                 <a href="http://blog.weltraumschaf.de/" title="Mein Blog">
@@ -86,6 +84,6 @@
                 Root-Zertifikate von CAcert</a>
         </div>
 
-        <?php include 'inc/body_javascript.html'; ?>        
+        <?php include 'inc/body_javascript.php'; ?>
     </body>
 </html>
