@@ -1,8 +1,8 @@
 (function(){
     var _gaq = _gaq || [], ga, s;
 
-    $.facebox.settings.loadingImage = 'img/Loading.gif';
-    $.facebox.settings.closeImage   = 'img/Closelabel.png';
+    $.facebox.settings.loadingImage = 'img/facebox/loading.gif';
+    $.facebox.settings.closeImage   = 'img/facebox/closelabel.png';
     $(function() {
         $('.contact').amail('(at)','(dot)');
         $('a[rel*=facebox]').facebox();
