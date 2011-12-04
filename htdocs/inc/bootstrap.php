@@ -40,3 +40,4 @@ set_include_path(implode(PATH_SEPARATOR, array(
 
 require_once 'girly.php';
 require_once 'htmlify.php';
+require_once 'isAjax.php';
