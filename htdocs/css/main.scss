@@ -13,9 +13,11 @@
  * @license   http://www.weltraumschaf.de/the-beer-ware-license.txt
  */
 
-$colorBackGround: #E4E4E4;
-$colorLinkActive: #5A5A5A;
-$colorLinkHover: #8D8D8D;
+$colorBlack:      #1C1C1C;
+$colorDarkGrey:   #5A5A5A;
+$colorMiddleGrey: #8D8D8D;
+$colorLightGrey:  #E4E4E4;
+$colorWhite:      #fff;
 
 html {
     margin: 0;
@@ -25,13 +27,14 @@ html {
 body {
     font-family:      'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     text-align:       center;
-    background-color: $colorBackGround;
-    margin:           0;
-    padding:          0;
+    background-color: $colorLightGrey;
 }
 
 h1 {
-    margin: 200px 0 0 0;
+    margin: 150px 0 50px 0;
+    font-size: 3.8em;
+    color: $colorMiddleGrey;
+    text-shadow: -2px -2px 2px $colorBlack, 2px 2px 2px $colorWhite;
 }
 
 h2 {
@@ -48,33 +51,37 @@ img {
 }
 
 a {
-    color: #000;
+    color: $colorBlack;
 }
 
 a:visited, a:active {
-    color: $colorLinkActive;
+    color: $colorDarkGrey;
 }
 
 a:hover {
-    color: $colorLinkHover;
+    color: $colorDarkGrey;
+    text-shadow: 0 0 5px $colorMiddleGrey;
 }
 
-#profiles ul {
-    list-style: none;
-    margin:     0;
-    padding:    0;
+#profiles {
+    ul {
+        list-style: none;
+        margin:     0;
+        padding:    0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
 
-#profiles li {
-    display: inline;
-}
-
-#profiles a {
-    text-decoration: none;
-}
 
 #links, #profiles {
-    background-color: #E4E4E4;
+    background-color: $colorLightGrey;
     padding-top: 25px;
 }
 
@@ -94,18 +101,27 @@ a:hover {
     position:   relative;
     width:      798px;
     height:     406px;
-    background: #E4E4E4;
+    background: $colorLightGrey;
     overflow:   hidden;
     cursor:     none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-user-select: none;
-}
 
-#text-shadow-box div.wall {
-    position: absolute;
-    top:      175px;
-    left:     0;
-    width:    100%;
+    div.wall {
+        position: absolute;
+        top:      175px;
+        left:     0;
+        width:    100%;
+
+        div {
+            position:   absolute;
+            background: $colorLightGrey;
+            top:        42px;
+            left:       0;
+            height:     300px;
+            width:      100%;
+        }
+    }
 }
 
 #tsb-text {
@@ -114,22 +130,12 @@ a:hover {
     left:           0;
     right:          0;
     margin:         0;
-    color:          #FFF;
-    font-family:    Helvetica, Arial, sans-serif;
+    color:          $colorWhite;
     font-size:      80px;
     line-height:    0.5em;
     height:         1px;
     font-weight:    bold;
     text-align:     center;
-}
-
-div.wall div {
-    position:   absolute;
-    background: #E4E4E4;
-    top:        42px;
-    left:       0;
-    height:     300px;
-    width:      100%;
 }
 
 #tsb-box {
