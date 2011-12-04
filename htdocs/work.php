@@ -1,5 +1,8 @@
 <?php require_once 'inc/bootstrap.php'; ?>
+<?php if ( ! isAjax()): ?>
 <?php include 'inc/header.php'; ?>
+<?php endif; ?>
+
     <h2>Arbeiten vom Weltraumschaf</h2>
 
     <div id="work">
