@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+http://www.zachstronaut.com/lab/text-shadow-box/text-shadow-box2.html
+-->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>text shadow box 2 - zachstronaut</title>
+
+        <style type="text/css" media="all">
+            html {
+                margin:  0;
+                padding: 0;
+            }
+
+            body {
+                margin:      0;
+                padding:     0;
+                background:  #000;
+                text-align:  center;
+            }
+
+            .contain {
+                padding-top: 20px;
+                width: 800px;
+            }
+
+            #text-shadow-box {
+                position:   relative;
+                width:      798px;
+                height:     406px;
+                background: #E4E4E4;
+                overflow:   hidden;
+                cursor:     none;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-user-select: none;
+            }
+
+            #text-shadow-box div.wall {
+                position: absolute;
+                top:      175px;
+                left:     0;
+                width:    100%;
+            }
+
+            #tsb-text {
+                position: absolute;
+                top:            0;
+                left:           0;
+                right:          0;
+                margin:         0;
+                color:          #FFF;
+                font-family:    Helvetica, Arial, sans-serif;
+                font-size:      80px;
+                line-height:    0.5em;
+                height:         1px;
+                font-weight:    bold;
+                text-align:     center;
+            }
+
+            div.wall div {
+                position:   absolute;
+                background: #E4E4E4;
+                top:        42px;
+                left:       0;
+                height:     300px;
+                width:      100%;
+            }
+
+            #tsb-box {
+                left: -100px;
+                width: 800px;
+            }
+
+            #tsb-spot {
+                position:   absolute;
+                top:        0;
+                left:       0;
+                width:      200%;
+                height:     200%;
+                background: url(spotlight.png) center center;
+                background: -moz-radial-gradient(center 45deg, circle closest-side, transparent 0%, black 60%);
+                background: -webkit-gradient(radial, center center, 0, center center, 250, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+            }
+        </style>
+    </head>
+    <body>
+
+            <div id="text-shadow-box">
+                <div class="wall">
+                    <div id="tsb-box"></div>
+                    <p id="tsb-text">Weltraumschaf</p>
+                    <div></div>
+                </div>
+
+                <div id="tsb-spot"></div>
+            </div>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" charset="utf-8">
+        (function() {
+            var $text, $spot, $box,
+                boxProperty = '';
+
+             function onMouseMove(e) {
+                var xm = e.clientX - 400,
+                    ym = e.clientY - 175,
+                    d  = Math.round(Math.sqrt(xm * xm + ym * ym) / 5);
+
+                $text.css("text-shadow", -xm + 'px ' + -ym + 'px ' + (d + 10) + 'px black');
+
+                if (boxProperty) {
+                    $box.css(boxProperty, '0 ' + -ym + 'px ' + (d + 30) + 'px black');
+                }
+
+                xm = e.clientX - 800;
+                ym = e.clientY - 450;
+                $spot.css("background-position", xm + 'px ' + ym + 'px');
+            }
+
+            $(function () {
+                $text = $('#tsb-text');
+                $spot = $('#tsb-spot');
+                $box  = $('#tsb-box');
+
+                if ($box.css('webkit-box-shadow') !== '') {
+                    boxProperty = 'webkit-box-shadow';
+                } else if ($box.css('moz-box-shadow') !== '') {
+                    boxProperty = 'moz-box-shadow';
+                } else if ($box.css('box-shadow') !== '') {
+                    boxProperty = 'box-shadow';
+                }
+
+                if ($text.size() && $spot.size() && $box.size()) {
+                    $('#text-shadow-box').bind('mousemove', onMouseMove)
+                                         .bind('touchmove', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onMouseMove({
+                            clientX: e.touches[0].clientX,
+                            clientY: e.touches[0].clientY
+                        });
+                    });
+                }
+
+                onMouseMove({clientX: 400, clientY: 200});
+            });
+        }());
+        </script>
+    </body>
+</html>
