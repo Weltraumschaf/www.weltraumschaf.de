@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TARGET=./build.js
+SRC=../htdocs/js
+
+cat "${SRC}/jquery.js" > "${TARGET}"
+cat "${SRC}/jquery.facebox.js" >> "${TARGET}"
+cat "${SRC}/jquery.amail.js" >> "${TARGET}"
+cat "${SRC}/main.js" >> "${TARGET}"
+
+yuicompressor "${TARGET}" > "${SRC}/live.js"
+rm "${TARGET}"

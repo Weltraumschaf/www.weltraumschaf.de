@@ -3,52 +3,62 @@
         $text, $spot, $box,
         boxProperty = '';
 
-     function onMouseMove(e) {
-        var xm = e.clientX - 400,
-            ym = e.clientY - 175,
-            d  = Math.round(Math.sqrt(xm * xm + ym * ym) / 5);
-
-        $text.css("text-shadow", -xm + 'px ' + -ym + 'px ' + (d + 10) + 'px black');
-
-        if (boxProperty) {
-            $box.css(boxProperty, '0 ' + -ym + 'px ' + (d + 30) + 'px black');
-        }
-
-        xm = e.clientX - 800;
-        ym = e.clientY - 450;
-        $spot.css("background-position", xm + 'px ' + ym + 'px');
-    }
+//     function onMouseMove(e) {
+//        var xm = e.clientX - 400,
+//            ym = e.clientY - 175,
+//            d  = Math.round(Math.sqrt(xm * xm + ym * ym) / 5);
+//
+//        $text.css("text-shadow", -xm + 'px ' + -ym + 'px ' + (d + 10) + 'px black');
+//
+//        if (boxProperty) {
+//            $box.css(boxProperty, '0 ' + -ym + 'px ' + (d + 30) + 'px black');
+//        }
+//
+//        xm = e.clientX - 800;
+//        ym = e.clientY - 450;
+//        $spot.css("background-position", xm + 'px ' + ym + 'px');
+//    }
 
     $.facebox.settings.loadingImage = 'img/facebox/loading.gif';
     $.facebox.settings.closeImage   = 'img/facebox/closelabel.png';
     $(function() {
+        var $menu = $('#menu');
+
         $('.contact').amail('(at)','(dot)');
         $('a[rel*=facebox]').facebox();
-        $text = $('#tsb-text');
-        $spot = $('#tsb-spot');
-        $box  = $('#tsb-box');
+        $('.menuitem img').animate({width: 55}, 0); //Set all menu items to smaller size
+        $menu.css('left', ($(document).width() - $menu.width()) / 2);
+        $('.menuitem').mouseover(function(){ //When mouse over menu item
+            $(this).find('img').stop().animate({width: 72}, 150); //Animate image expanding to original size
+        }).mouseout(function(){ //When mouse no longer over menu item
+            $(this).find('img').stop().animate({width: 55}, 150); //Animate image back to smaller size
+        });
 
-        if ($text.size() && $spot.size() && $box.size()) {
-            if ($box.css('webkit-box-shadow') !== '') {
-                boxProperty = 'webkit-box-shadow';
-            } else if ($box.css('moz-box-shadow') !== '') {
-                boxProperty = 'moz-box-shadow';
-            } else if ($box.css('box-shadow') !== '') {
-                boxProperty = 'box-shadow';
-            }
-
-            $('#text-shadow-box').bind('mousemove', onMouseMove)
-                                 .bind('touchmove', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                onMouseMove({
-                    clientX: e.touches[0].clientX,
-                    clientY: e.touches[0].clientY
-                });
-            });
-        }
-
-        onMouseMove({clientX: 400, clientY: 200});
+//        $text = $('#tsb-text');
+//        $spot = $('#tsb-spot');
+//        $box  = $('#tsb-box');
+//
+//        if ($text.size() && $spot.size() && $box.size()) {
+//            if ($box.css('webkit-box-shadow') !== '') {
+//                boxProperty = 'webkit-box-shadow';
+//            } else if ($box.css('moz-box-shadow') !== '') {
+//                boxProperty = 'moz-box-shadow';
+//            } else if ($box.css('box-shadow') !== '') {
+//                boxProperty = 'box-shadow';
+//            }
+//
+//            $('#text-shadow-box').bind('mousemove', onMouseMove)
+//                                 .bind('touchmove', function (e) {
+//                e.preventDefault();
+//                e.stopPropagation();
+//                onMouseMove({
+//                    clientX: e.touches[0].clientX,
+//                    clientY: e.touches[0].clientY
+//                });
+//            });
+//        }
+//
+//        onMouseMove({clientX: 400, clientY: 200});
     });
 
     try {
