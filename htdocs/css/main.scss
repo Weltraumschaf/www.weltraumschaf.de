@@ -125,17 +125,20 @@ a:hover {
 }
 
 #tsb-text {
-    position: absolute;
-    top:            0;
-    left:           0;
-    right:          0;
-    margin:         0;
-    color:          $colorWhite;
-    font-size:      80px;
-    line-height:    0.5em;
-    height:         1px;
-    font-weight:    bold;
-    text-align:     center;
+    position:    absolute;
+    top:         0;
+    left:        0;
+    right:       0;
+    margin:      0;
+    color:       $colorWhite;
+    line-height: 0.5em;
+    height:      1px;
+    text-align:  center;
+
+    font {
+        weight:    bold;
+        size:      80px;
+    }
 }
 
 #tsb-box {
