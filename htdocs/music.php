@@ -55,8 +55,8 @@
                     <td><a href="files/Unbenannt.ogg" target="_blank">ogg</a></td>
                     <td>
                         <audio controls="controls">
-                            <source src="./files/Unbenannt.mp3" type="audio/mp3"/>
-                            <source src="./files/Unbenannt.ogg" type="audio/ogg"/>
+                            <source src="files/Unbenannt.mp3" type="audio/mp3"/>
+                            <source src="files/Unbenannt.ogg" type="audio/ogg"/>
                             Your browser is too old. Go away and upgrade your Browser!
                         </audio>
                     </td>
