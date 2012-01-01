@@ -3,3 +3,5 @@ nbproject/
 .idea/
 reports/
 /htdocs/css/.sass-cache/
+/.sass-cache/
+/htdocs/.sass-cache/
