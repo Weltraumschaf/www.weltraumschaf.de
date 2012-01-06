@@ -12,6 +12,7 @@
                 <a href="http://en.wikipedia.org/wiki/Korg_Polysix" target="_blank">Korg Polysix</a> und
                 <a href="http://www.use-audio.com/plugiator.htm" target="_blank">Plugiator</a>:
             </p>
+
             <table>
                 <tr>
                     <td>Drums</td>
@@ -21,7 +22,7 @@
                         <audio controls="controls">
                             <source src="files/Drums.mp3" type="audio/mp3"/>
                             <source src="files/Drums.ogg" type="audio/ogg"/>
-                            Your browser is too old. Go away and upgrade your Browser!
+                            Geh weg! Dein Browser ist zu alt.
                         </audio>
                     </td>
                 </tr>
@@ -33,7 +34,7 @@
                         <audio controls="controls">
                             <source src="files/Leipzig.mp3" type="audio/mp3"/>
                             <source src="files/Leipzig.ogg" type="audio/ogg"/>
-                            Your browser is too old. Go away and upgrade your Browser!
+                            Geh weg! Dein Browser ist zu alt.
                         </audio>
                     </td>
                 </tr>
@@ -62,6 +63,12 @@
                     </td>
                 </tr>
             </table>
+
+            <p>
+                Das ganze ist ver&ouml;ffentlicht unter der <a href="http://creativecommons.org/licenses/by-nc/3.0/">
+                Creative Commons Licencse</a> und auch bei <a href="http://soundcloud.com/weltraumschaf">
+                Soundcloud</a> verf&uuml;gbar.
+            </p>
         </div>
 
 <?php if ( ! isAjax()): ?>
