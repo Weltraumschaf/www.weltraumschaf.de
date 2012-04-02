@@ -25,7 +25,7 @@
                     <img src="img/Linkedin.png" alt="Linked in" />
                 </a>
                 <a class="menuitem" href="https://plus.google.com/111699688981457167133/posts" title="Mein Google+ Profil">
-                    <img src="img/Linkedin.png" alt="Linked in" />
+                    <img src="img/GooglePlus.png" alt="Google+" />
                 </a>
                 <a class="menuitem" href="http://www.kwick.de/Weltraumschaf" title="Mein KWICK!-Profil">
                     <img src="img/Kwick.png" alt="KWICK!" />
