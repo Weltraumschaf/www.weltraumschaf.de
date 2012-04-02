@@ -24,6 +24,9 @@
                 <a class="menuitem" href="http://de.linkedin.com/pub/sven-strittmatter/21/751/537" title="Mein Linked in-Profil">
                     <img src="img/Linkedin.png" alt="Linked in" />
                 </a>
+                <a class="menuitem" href="https://plus.google.com/111699688981457167133/posts" title="Mein Google+ Profil">
+                    <img src="img/Linkedin.png" alt="Linked in" />
+                </a>
                 <a class="menuitem" href="http://www.kwick.de/Weltraumschaf" title="Mein KWICK!-Profil">
                     <img src="img/Kwick.png" alt="KWICK!" />
                 </a>
