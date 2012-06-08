@@ -43,7 +43,7 @@
         </div>
 
         <div id="links">
-            <a href="work.php" rel="facebox" title="Arbeiten vom Weltraumschaf">
+            <a href="https://blog.weltraumschaf.de/sites/projects.html" title="Arbeiten vom Weltraumschaf">
                 Arbeiten</a> &ndash;
                 <a href="cite.php" rel="facebox" title="Ein Zitat das Weltraumschaf gut findet">
                 Zitat</a> &ndash;
