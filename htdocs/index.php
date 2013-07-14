@@ -33,7 +33,7 @@
                 <a class="menuitem" href="https://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
                     <img src="img/Github.png" alt="GitHub" />
                 </a>
-                <a class="menuitem" href="http://www.weltraumschaf.de:8080/" title="Mein Hudson CI Server">
+                <a class="menuitem" href="http://ci.weltraumschaf.de/" title="Mein Hudson CI Server">
                     <img src="img/Hudson.png" alt="Hudson CI" />
                 </a>
                 <a class="menuitem" href="http://pear.weltraumschaf.de/" title="Mein PEAR Channel">
