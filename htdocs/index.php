@@ -30,7 +30,7 @@
                 <a class="menuitem" href="http://www.kwick.de/Weltraumschaf" title="Mein KWICK!-Profil">
                     <img src="img/Kwick.png" alt="KWICK!" />
                 </a>
-                <a class="menuitem" href="https://github.com/Weltraumschaf/" title="Meine GitHub Repositories">
+                <a class="menuitem" href="http://weltraumschaf.github.io/" title="Meine GitHub Repositories">
                     <img src="img/Github.png" alt="GitHub" />
                 </a>
                 <a class="menuitem" href="http://ci.weltraumschaf.de/" title="Mein Hudson CI Server">
