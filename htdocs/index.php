@@ -12,7 +12,7 @@
 
         <div id="menuwrapper">
             <div id="menu">
-                <a class="menuitem" href="https://blog.weltraumschaf.de/" title="Mein Blog">
+                <a class="menuitem" href="http://blog.weltraumschaf.de/" title="Mein Blog">
                     <img src="img/Rss.png" alt="Blog" />
                 </a>
                 <a class="menuitem" href="https://twitter.com/Weltraumschaf/" title="Mein Twitter">
