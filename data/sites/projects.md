@@ -1,7 +1,8 @@
-Navi: Projects
-Description: My personal projects I'm working on
-Keywords: Projects, Jenkins, Darcs
-
+<?juberblog
+    Navi: Projects
+    Description: My personal projects I'm working on
+    Keywords: Projects, Jenkins, Darcs
+?>
 ## Projects
 
 Things I've coded in my live.

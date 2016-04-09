@@ -1,7 +1,8 @@
-Navi: About Me
-Description: Some words about Sven Strittmatter.
-Keywords: Sven, Strittmatter, about, CV
-
+<?juberblog
+    Navi: About Me
+    Description: Some words about Sven Strittmatter.
+    Keywords: Sven, Strittmatter, about, CV
+?>
 ## Some Words About Me
 
 <img src="../img/ich.jpg" width="130" style="float:left; padding: 10px 35px 15px 10px;"/> My name is Sven Strittmatter and I'm a software engineer home based in [Stuttgart (Germany)][1]. 2005 I've graduated as [Diplom-Ingenieur][2] for information technology at [Duale Hochschule Stuttgart][3].

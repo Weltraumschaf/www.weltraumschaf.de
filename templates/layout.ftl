@@ -27,13 +27,14 @@
                     <div>
                         <ul>
                             <li class="current_page_item">
-                                <a title="Home" href="<%= siteUrl %>">Home</a>
+                                <a title="Home" href="${baseUrl}">Home</a>
                             </li>
-                            <% for site in sites %>
                             <li>
-                                <a title="<%= site.title %>" href="<%= site.url %>"><%= site.navi %></a>
+                                <a title="Projects" href="${baseUrl}/sites/projects.html">Projects</a>
                             </li>
-                            <% end %>
+                            <li>
+                                <a title="About Me" href="${baseUrl}/sites/about-me.html">About Me</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
