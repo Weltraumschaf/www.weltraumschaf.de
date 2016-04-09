@@ -77,7 +77,7 @@
                         </ul>
                     </aside>
                     <aside>
-                        <h3 class="meta">version <%= version %></h3>
+                        <h3 class="meta">version ${blogVersion}</h3>
                     </aside>
                 </div>
 

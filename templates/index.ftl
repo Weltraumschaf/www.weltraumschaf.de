@@ -3,7 +3,7 @@
     <#list posts as post>
     <li>
         <a href="${post.link}">${post.title}</a>
-        <span>(${post.pubDate})</span>
+        <span class="date">(${post.pubDate?string["dd.MM.yyyy, HH:mm"]})</span>
     </li>
     </#list>
 </ul>
