@@ -1,2 +1,4 @@
 /public/**/*.html
 /public/**/*.xml
+/public/css/*.css
+/.sass-cache/
