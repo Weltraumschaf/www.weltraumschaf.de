@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd /var/www/blog.weltraumschaf.de
+git pull origin master
+/home/sxs/src/java/juberblog/bin/juberblog publish -v -c configuration/configuration.properties
+sass sass/main.scss public/css/main.css
+chmod -R a+rX public
+cd -
