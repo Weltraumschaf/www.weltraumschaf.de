@@ -4,6 +4,6 @@ description: ""
 date: {{ .Date }}
 tags: []
 categories: []
-authors: ""
+authors: "Sven Strittmatter"
 draft: true
 ---
