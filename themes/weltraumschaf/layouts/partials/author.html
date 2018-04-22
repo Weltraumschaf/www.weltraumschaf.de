@@ -1,0 +1,7 @@
+{{ if isset .Params "authors" }}
+<div class="row li-author">
+    <div class="sixteen columns">
+        Written by <em>{{ .Params.Authors }}</em>
+    </div>
+</div>
+{{ end }}
