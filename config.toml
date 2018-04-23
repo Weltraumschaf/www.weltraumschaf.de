@@ -1,4 +1,4 @@
-baseURL         = "http://blog.weltraumschaf.de/"
+baseURL         = "https://blog.weltraumschaf.de/"
 languageCode    = "en-us"
 title           = "Das Weltraumschaf"
 theme           = "introduction"
