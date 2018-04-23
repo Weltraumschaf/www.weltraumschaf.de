@@ -48,21 +48,21 @@ canonifyurls    = true      # Turns relative urls into absolute urls
 # Find icon names here: http://fontawesome.io/cheatsheet/
 
 [[params.social]]
-    url  = "https://twitter.com/Weltraumschaf"
-    icon = "twitter"
+    url  = "http://weltraumschaf.github.io/"
+    icon = "github"
 
 [[params.social]]
-    url  = "https://de.linkedin.com/in/sven-strittmatter-53775121"
-    icon = "linkedin"
+    url  = "https://twitter.com/Weltraumschaf"
+    icon = "twitter"
 
 [[params.social]]
     url  = "https://www.xing.com/profile/Sven_Strittmatter"
     icon = "xing"
 
 [[params.social]]
-    url  = "https://plus.google.com/111699688981457167133/posts"
-    icon = "google-plus"
+    url  = "https://de.linkedin.com/in/sven-strittmatter-53775121"
+    icon = "linkedin"
 
 [[params.social]]
-    url  = "http://weltraumschaf.github.io/"
-    icon = "github"
+    url  = "https://plus.google.com/111699688981457167133/posts"
+    icon = "google-plus"
