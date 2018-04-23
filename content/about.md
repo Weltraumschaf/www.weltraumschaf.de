@@ -1,11 +1,12 @@
 ---
-title: "About Me"
+title: "About"
 description: "Some words about Sven Strittmatter."
 date: 2018-04-23T09:08:11+02:00
 ---
-## Some Words About Me
 
-<img src="/img/ich.jpg" width="130" style="float:left; padding: 10px 35px 15px 10px;"/> My name is Sven Strittmatter and I'm a software engineer home based in [Stuttgart (Germany)][1]. 2005 I've graduated as [Diplom-Ingenieur][2] for information technology at [Duale Hochschule Stuttgart][3].
+My name is Sven Strittmatter and I'm a software engineer home based in [Stuttgart (Germany)][1]. 2005 I've graduated as [Diplom-Ingenieur][2] for information technology at [Duale Hochschule Stuttgart][3].
+
+## Some Words About Me
 
 As part of practical education for my studies I was employed at the [Fraunhofer IPA][4] in the departments for "production and automation engineering" and "facility layout and logistics planing". Here I got in touch with large scaled projects and supported them with software tools.
 
