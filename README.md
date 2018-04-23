@@ -9,3 +9,7 @@ Clone this repo and `cd` into the directory.
 - run it local `hugo serve`
 - create a new blog post `hugo new post/the_title.md`
 - generate the static site `hugo` (will be generated in directory `public`)
+
+## TODO
+
+- [Check this Theme](https://vickylai.com/introduction/)
