@@ -3,11 +3,11 @@ title: "Contact"
 date: 2018-04-23T09:08:26+02:00
 ---
 
-Sollten Sie mich aus irgendwelchen Gründen kontaktiern wollen, dann können Sie das per E-Mail tun. Schreiben Sie an ich(at)weltraumschaf(dot)de.
+If you want to contact me, for whatever reason, you can contact my by email. Write to ich(at)weltraumschaf(dot)de. (Change "(at)" and "(dot)" into the corresponding characters.)
 
-Wollen Sie mehr Informationen über diese Domain, dann können Sie diese bei der [DeNIC][denic] abrufen.
+Would you like to have more information about this domain please obtain them at [DeNIC][denic].
 
-Alles auf dieser Website wird unter der [Beer-Ware License][license] veröffentlicht, sofern nichts anderes angegeben ist.
+All content of this website is published under the [Beer-Ware License][license], unless explicitly marked differntly.
 
 [denic]:    http://www.denic.de/
 [license]:  http://www.weltraumschaf.de/the-beer-ware-license.txt
