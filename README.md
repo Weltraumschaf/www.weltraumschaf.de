@@ -12,5 +12,4 @@ Clone this repo and `cd` into the directory.
 
 ## TODO
 
-- Impressum
 - Move content from https://github.com/Weltraumschaf/weltraumschaf.de and make this site for https://www.weltraumschaf.de

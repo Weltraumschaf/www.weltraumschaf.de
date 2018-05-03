@@ -9,5 +9,7 @@ Would you like to have more information about this domain please obtain them at 
 
 All content of this website is published under the [Beer-Ware License][license], unless explicitly marked differntly.
 
+[Deutsche Version / German version](/impressum)
+
 [denic]:    http://www.denic.de/
 [license]:  http://www.weltraumschaf.de/the-beer-ware-license.txt
