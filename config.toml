@@ -1,10 +1,12 @@
-baseURL         = "https://blog.weltraumschaf.de/"
-languageCode    = "en-us"
-title           = "Das Weltraumschaf"
-theme           = "introduction"
-enforce_ssl     = true
-builddrafts     = false     # Include pages with draft status of true
-canonifyurls    = true      # Turns relative urls into absolute urls
+# Docu of all options: https://gohugo.io/getting-started/configuration/#all-configuration-settings
+baseURL             = "https://blog.weltraumschaf.de/"
+languageCode        = "en-us"
+title               = "Das Weltraumschaf"
+theme               = "introduction"
+enforce_ssl         = true
+builddrafts         = false     # Include pages with draft status of true
+canonifyurls        = true      # Turns relative urls into absolute urls
+disablePathToLower  = true
 # disqusshortname = "xxx"   # Enable Disqus for comments
 # googleAnalytics = "xxx"
 
