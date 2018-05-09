@@ -7,6 +7,9 @@ enforce_ssl         = true
 builddrafts         = false     # Include pages with draft status of true
 canonifyurls        = true      # Turns relative urls into absolute urls
 disablePathToLower  = true
+enableEmoji         = true      # https://www.webpagefx.com/tools/emoji-cheat-sheet/
+enableGitInfo       = true
+enableRobotsTXT     = true
 # disqusshortname = "xxx"   # Enable Disqus for comments
 # googleAnalytics = "xxx"
 
