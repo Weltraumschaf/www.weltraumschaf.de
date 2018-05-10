@@ -1,0 +1,77 @@
+# Docu of all options: https://gohugo.io/getting-started/configuration/#all-configuration-settings
+baseURL             = "https://blog.weltraumschaf.de/"
+languageCode        = "en-us"
+title               = "Das Weltraumschaf"
+theme               = "introduction"
+enforce_ssl         = true
+builddrafts         = false     # Include pages with draft status of true
+canonifyurls        = true      # Turns relative urls into absolute urls
+disablePathToLower  = true
+enableEmoji         = true      # https://www.webpagefx.com/tools/emoji-cheat-sheet/
+enableGitInfo       = true
+enableRobotsTXT     = true
+# disqusshortname = "xxx"   # Enable Disqus for comments
+# googleAnalytics = "xxx"
+
+
+[params]
+    blogHead            = "Das Weltraumschaf"               # Full name shows on blog post pages
+    firstName           = "Weltraumschaf"                   # First name shows in introduction on main page
+    tagLine             = "Supreme Head of Inteligence Targeting - Level 5 Laser Lotus" # Appears after the introduction
+    introHeight         = "large"                           # Input either 'medium' or 'large' or 'fullheight'
+    themeStyle          = "dark"                            # Choose 'light' or 'dark'
+    avatar              = "img/ich.jpg"                     # Path to image in static folder eg. img/avatar.png, or comment out to remove
+    email               = "ich@weltraumschaf.de"            # Shows in contact section, or leave blank to omit
+    localTime           = true                              # Show your current local time in contact section
+    timeZone            = "Europe/Berlin"                   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    dateForm            = "2. Jan 2006"
+    dateFormFull        = "2. Jan 2006 15:04:05 EST"
+    cacheBuster         = false                             # Add the current unix timestamp in query string for cache busting css assets (relevant in development mode)
+    description         = "Website Description"             # Max 160 characters show in search results
+    faviconFile         = "img/favicon.ico"
+    pygmentsStyle       = "monokai"                         # https://help.farbox.com/pygments.html
+    pygmentsCodefences  = true
+    footerText          = ""                                # Text to show in footer (overrides default text)
+    fadeIn              = true                              # Turn on/off the fade-in effect
+    customCSS           = []                                # Include custom css files e.g. ["css/foo.css", "css/bar.css"]
+
+    showBlog            = true                              # Show Blog section on home page
+    showProjects        = true                              # Show Projects section on home page
+    projectColumns      = "3"                               # Choose "2" or "3" columns for projects section
+    placeHolderimg      = "/img/workday.jpg"                # For Projects without image
+    showAllPosts        = false                             # Set 'true' to list all posts on home page, or set 'false' to link to separate blog list page
+    showLatest          = true                              # Show latest blog post summary
+    shareButtons        = true                              # On post pages, show share this social buttons
+
+    # Share buttons
+    shareTwitter        = true
+    shareFacebook       = false
+    sharePinterest      = false
+    shareGooglePlus     = false
+
+# Social icons appear in introduction and contact section. Add as many more as you like.
+# Find icon names here: http://fontawesome.io/cheatsheet/
+
+[[params.social]]
+    url  = "http://weltraumschaf.github.io/"
+    icon = "github"
+
+[[params.social]]
+    url  = "https://twitter.com/Weltraumschaf"
+    icon = "twitter"
+
+[[params.social]]
+    url  = "https://www.xing.com/profile/Sven_Strittmatter"
+    icon = "xing"
+
+[[params.social]]
+    url  = "https://de.linkedin.com/in/sven-strittmatter-53775121"
+    icon = "linkedin"
+
+[[params.social]]
+    url  = "https://plus.google.com/111699688981457167133/posts"
+    icon = "google-plus"
+
+[[params.social]]
+    url  = "https://soundcloud.com/weltraumschaf"
+    icon = "soundcloud"
