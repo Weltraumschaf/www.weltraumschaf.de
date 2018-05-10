@@ -1,6 +1,6 @@
-# This is the Weltraumschaf Blog
+# Website of Weltraumschaf
 
-The blog is based on [Hugo](https://gohugo.io/).
+The site is based on [Hugo](https://gohugo.io/).
 
 ## Some Useful Commands
 
