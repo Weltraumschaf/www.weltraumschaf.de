@@ -35,6 +35,11 @@ p {
     padding: 5px;
 }
 
+.social a, .social a:visited, .social a:hover, .social a:active {
+    color: #C7C9CB;
+    font-size: larger;
+}
+
 @media only screen and (max-width: 280px) {
     body, p {
         width: 95%;
