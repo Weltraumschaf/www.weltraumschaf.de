@@ -32,6 +32,11 @@ h2 {
 p {
     margin: 0 auto;
     width: 280px;
+    padding-bottom: 0.7em;
+}
+
+a, a:visited, a:hover, a:active {
+    color: #C7C9CB;
 }
 
 .avatar {
@@ -46,10 +51,6 @@ p {
     font-size: 1.2em;
     padding-left: 0.2em;
     padding-right: 0.2em;
-}
-
-.social a, .social a:visited, .social a:hover, .social a:active {
-    color: #C7C9CB;
 }
 
 @media only screen and (max-width: 280px) {
