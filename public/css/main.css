@@ -24,7 +24,7 @@ h1 {
     font-weight: 600;
 }
 
-h2 {
+h3 {
     font-size: 0.9em;
     font-weight: 400;
 }
@@ -33,6 +33,10 @@ p {
     margin: 0 auto;
     width: 280px;
     padding-bottom: 0.7em;
+}
+
+.left {
+    text-align: left;
 }
 
 a, a:visited, a:hover, a:active {
